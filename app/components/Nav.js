@@ -6,8 +6,7 @@ import { usePathname } from 'next/navigation'
 const links = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/gallery', label: 'Gallery' },
-  { href: '/blog', label: 'Blog' },
+  { href: '/gallery', label: 'Portfolio' },
 ]
 
 export default function Nav() {
@@ -19,7 +18,7 @@ export default function Nav() {
     <nav className="border-b border-zinc-200 bg-white">
       <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-14">
         <Link href="/" className="font-semibold text-zinc-900 tracking-tight">
-          Matthew Lau
+          Your Brand
         </Link>
         <div className="flex gap-6">
           {links.map(({ href, label }) => (
