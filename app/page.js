@@ -4,6 +4,8 @@ import { aboutQuery } from '../sanity/lib/queries'
 import { urlFor } from '../sanity/lib/image'
 import Image from 'next/image'
 
+export const revalidate = 0
+
 export default async function Home() {
   const about = await client.fetch(aboutQuery)
 

@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { client } from '../../sanity/lib/client'
 import { blogPostsQuery } from '../../sanity/lib/queries'
 
+export const revalidate = 0
+
 export const metadata = { title: 'Blog — Matthew Lau' }
 
 export default async function BlogPage() {

@@ -1,6 +1,8 @@
 import { client } from '../../sanity/lib/client'
 import { aboutQuery } from '../../sanity/lib/queries'
 import { urlFor } from '../../sanity/lib/image'
+
+export const revalidate = 0
 import Image from 'next/image'
 
 export const metadata = { title: 'About — Matthew Lau' }
