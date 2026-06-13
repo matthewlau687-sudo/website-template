@@ -19,7 +19,7 @@ export default function Home() {
         </p>
         <div className="flex justify-center gap-4">
           <Link
-            href="/about"
+            href="/mission"
             className="px-6 py-3 bg-black text-white text-sm font-medium rounded-lg hover:bg-zinc-700 transition-colors"
           >
             Learn More
@@ -106,7 +106,7 @@ export default function Home() {
             Let's build something great for your business.
           </p>
           <Link
-            href="/about"
+            href="/mission"
             className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-zinc-100 transition-colors"
           >
             Get in Touch
