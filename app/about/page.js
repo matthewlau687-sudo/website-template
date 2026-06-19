@@ -22,10 +22,10 @@ export default async function AboutPage() {
     <div className="max-w-3xl mx-auto px-6 py-20">
       {about.profileImage && (
         <Image
-          src={urlFor(about.profileImage).width(160).height(160).url()}
+          src={urlFor(about.profileImage).width(400).height(400).quality(100).url()}
           alt={about.name}
-          width={160}
-          height={160}
+          width={200}
+          height={200}
           className="rounded-full object-cover border border-zinc-200 mb-8"
         />
       )}
