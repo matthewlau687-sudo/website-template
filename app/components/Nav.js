@@ -15,10 +15,13 @@ export default function Nav() {
   const isStudio = pathname.startsWith('/studio')
   if (isStudio) return null
 
+  const isHome = pathname === '/'
+  const dark = isHome
+
   return (
-    <nav className="border-b border-zinc-200 bg-white">
+    <nav className={`border-b ${dark ? 'bg-zinc-950 border-zinc-800' : 'bg-white border-zinc-200'}`}>
       <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-14">
-        <Link href="/" className="font-semibold text-zinc-900 tracking-tight">
+        <Link href="/" className={`font-semibold tracking-tight ${dark ? 'text-white' : 'text-zinc-900'}`}>
           Your Brand
         </Link>
         <div className="flex gap-6">
@@ -27,7 +30,11 @@ export default function Nav() {
               key={href}
               href={href}
               className={`text-sm transition-colors ${
-                pathname === href
+                dark
+                  ? pathname === href
+                    ? 'text-white font-medium'
+                    : 'text-zinc-400 hover:text-white'
+                  : pathname === href
                   ? 'text-zinc-900 font-medium'
                   : 'text-zinc-500 hover:text-zinc-900'
               }`}
