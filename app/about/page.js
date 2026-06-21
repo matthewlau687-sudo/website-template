@@ -17,13 +17,7 @@ export default async function AboutPage() {
       {/* Dark header */}
       <section className="bg-zinc-950 text-white">
         <div className="max-w-3xl mx-auto px-6 py-28 text-center">
-          <p className="text-sm font-semibold tracking-widest text-zinc-400 uppercase mb-4">
-            The Person Behind the Work
-          </p>
-          <h1 className="text-4xl font-bold mb-6">About Me</h1>
-          <p className="text-zinc-400 text-lg">
-            Building real relationships with the businesses I work with — not just websites.
-          </p>
+          <h1 className="text-4xl font-bold">About Me</h1>
         </div>
       </section>
 
@@ -64,7 +58,7 @@ export default async function AboutPage() {
             Have a project in mind? I'd love to hear about it.
           </p>
           <Link
-            href="/mission"
+            href="/contact"
             className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-zinc-200 transition-colors"
           >
             Get in Touch

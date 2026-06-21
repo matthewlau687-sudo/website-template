@@ -72,7 +72,7 @@ export default async function GalleryPage() {
             Let's build something you're proud to show off.
           </p>
           <Link
-            href="/mission"
+            href="/contact"
             className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-zinc-200 transition-colors"
           >
             Work With Us

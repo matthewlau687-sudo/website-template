@@ -106,7 +106,7 @@ export default function Home() {
             Let's build something great for your business.
           </p>
           <Link
-            href="/mission"
+            href="/contact"
             className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-zinc-200 transition-colors"
           >
             Get in Touch

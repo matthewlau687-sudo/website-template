@@ -85,7 +85,7 @@ export default function MissionPage() {
             Let's talk about what we can build for your business.
           </p>
           <Link
-            href="/about"
+            href="/contact"
             className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-zinc-200 transition-colors"
           >
             Get in Touch

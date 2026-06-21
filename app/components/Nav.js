@@ -8,6 +8,7 @@ const links = [
   { href: '/gallery', label: 'Portfolio' },
   { href: '/mission', label: 'Our Mission' },
   { href: '/about', label: 'About Me' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 export default function Nav() {
