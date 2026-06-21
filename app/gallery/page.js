@@ -1,53 +1,85 @@
 import { client } from '../../sanity/lib/client'
 import { galleryQuery } from '../../sanity/lib/queries'
 import { urlFor } from '../../sanity/lib/image'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export const revalidate = 0
-import Image from 'next/image'
 
-export const metadata = { title: 'Gallery — Matthew Lau' }
+export const metadata = { title: 'Portfolio — Your Brand' }
 
 export default async function GalleryPage() {
   const images = await client.fetch(galleryQuery)
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16">
-      <h1 className="text-3xl font-bold text-zinc-900 mb-10">Gallery</h1>
+    <div className="bg-white text-black">
 
-      {images.length === 0 ? (
-        <p className="text-zinc-500">No images yet. Add some in the Studio.</p>
-      ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {images.map((item) => (
-            <div key={item._id} className="group">
-              <div className="aspect-square overflow-hidden rounded-lg bg-zinc-100 border border-zinc-200">
-                {item.image && (
-                  <Image
-                    src={urlFor(item.image).width(600).height(600).url()}
-                    alt={item.title || ''}
-                    width={600}
-                    height={600}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                )}
-              </div>
-              {(item.title || item.description) && (
-                <div className="mt-3">
-                  {item.title && (
-                    <p className="text-sm font-medium text-zinc-800">{item.title}</p>
-                  )}
-                  {item.description && (
-                    <p className="text-sm text-zinc-500 mt-0.5">{item.description}</p>
-                  )}
-                  {item.date && (
-                    <p className="text-xs text-zinc-400 mt-0.5">{item.date}</p>
+      {/* Dark header */}
+      <section className="bg-zinc-950 text-white">
+        <div className="max-w-5xl mx-auto px-6 py-28 text-center">
+          <p className="text-sm font-semibold tracking-widest text-zinc-400 uppercase mb-4">
+            Our Work
+          </p>
+          <h1 className="text-4xl font-bold mb-6">
+            Results speak louder than promises.
+          </h1>
+          <p className="text-zinc-400 text-lg max-w-xl mx-auto">
+            Browse our portfolio of websites built for real small businesses — each one designed to attract customers and drive growth.
+          </p>
+        </div>
+      </section>
+
+      {/* Portfolio grid */}
+      <section className="max-w-5xl mx-auto px-6 py-20">
+        {images.length === 0 ? (
+          <p className="text-zinc-400 text-center py-20">Portfolio coming soon.</p>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {images.map((item) => (
+              <div key={item._id} className="group">
+                <div className="aspect-square overflow-hidden rounded-xl bg-zinc-100 border border-zinc-200">
+                  {item.image && (
+                    <Image
+                      src={urlFor(item.image).width(600).height(600).url()}
+                      alt={item.title || ''}
+                      width={600}
+                      height={600}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   )}
                 </div>
-              )}
-            </div>
-          ))}
+                {(item.title || item.description) && (
+                  <div className="mt-3">
+                    {item.title && (
+                      <p className="text-sm font-semibold text-zinc-800">{item.title}</p>
+                    )}
+                    {item.description && (
+                      <p className="text-sm text-zinc-500 mt-0.5">{item.description}</p>
+                    )}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
+
+      {/* CTA */}
+      <section className="bg-zinc-950 text-white">
+        <div className="max-w-5xl mx-auto px-6 py-24 text-center">
+          <h2 className="text-3xl font-bold mb-4">Want a site like these?</h2>
+          <p className="text-zinc-400 mb-8">
+            Let's build something you're proud to show off.
+          </p>
+          <Link
+            href="/mission"
+            className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-zinc-200 transition-colors"
+          >
+            Work With Us
+          </Link>
         </div>
-      )}
+      </section>
+
     </div>
   )
 }
