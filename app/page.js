@@ -72,7 +72,7 @@ export default function Home() {
                   'Monthly subscription fees add up',
                   'No Google Business setup',
                   'No strategy — just a blank page',
-                  'You're on your own if something breaks',
+                  "You're on your own if something breaks",
                 ].map((item) => (
                   <li key={item} className="flex gap-2 items-start">
                     <span className="text-zinc-300 mt-0.5">✗</span>
