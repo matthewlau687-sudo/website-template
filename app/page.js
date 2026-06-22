@@ -85,7 +85,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
             <h2 className="text-3xl font-bold mb-2">Ready to get started?</h2>
-            <p className="text-zinc-400">No commitment required — just a conversation.</p>
+            <p className="text-zinc-400">No commitment required.</p>
           </div>
           <Link
             href="/contact"
