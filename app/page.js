@@ -52,6 +52,80 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Comparison */}
+      <section className="bg-zinc-50 border-t border-zinc-100">
+        <div className="max-w-4xl mx-auto px-6 py-24">
+          <h2 className="text-2xl font-bold mb-3">Why not just use a template or AI?</h2>
+          <p className="text-zinc-500 mb-12 max-w-xl">
+            Fair question. Here's the honest difference.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            {/* Template */}
+            <div className="bg-white border border-zinc-200 rounded-2xl p-6">
+              <p className="text-xs font-semibold tracking-widest text-zinc-400 uppercase mb-4">Website Builder / Template</p>
+              <ul className="flex flex-col gap-3 text-sm text-zinc-500">
+                {[
+                  'You design and build it yourself',
+                  'Looks like thousands of other sites',
+                  'Monthly subscription fees add up',
+                  'No Google Business setup',
+                  'No strategy — just a blank page',
+                  'You're on your own if something breaks',
+                ].map((item) => (
+                  <li key={item} className="flex gap-2 items-start">
+                    <span className="text-zinc-300 mt-0.5">✗</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* AI Tools */}
+            <div className="bg-white border border-zinc-200 rounded-2xl p-6">
+              <p className="text-xs font-semibold tracking-widest text-zinc-400 uppercase mb-4">AI Tools</p>
+              <ul className="flex flex-col gap-3 text-sm text-zinc-500">
+                {[
+                  'Output still needs expert editing',
+                  'You write every prompt yourself',
+                  'Can\'t set up your Google listing',
+                  'Generic content, no local knowledge',
+                  'No accountability or follow-through',
+                  'Still requires your time and effort',
+                ].map((item) => (
+                  <li key={item} className="flex gap-2 items-start">
+                    <span className="text-zinc-300 mt-0.5">✗</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Me */}
+            <div className="bg-zinc-950 text-white rounded-2xl p-6">
+              <p className="text-xs font-semibold tracking-widest text-zinc-400 uppercase mb-4">Working With Me</p>
+              <ul className="flex flex-col gap-3 text-sm text-zinc-300">
+                {[
+                  'Done completely for you',
+                  'Built around your specific business',
+                  'Transparent, one-time or monthly pricing',
+                  'Google Business setup included',
+                  'Strategy tailored to your goals',
+                  'Ongoing support when you need it',
+                ].map((item) => (
+                  <li key={item} className="flex gap-2 items-start">
+                    <span className="text-white mt-0.5">✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* How it works */}
       <section className="max-w-4xl mx-auto px-6 py-24">
         <h2 className="text-2xl font-bold mb-12">How it works</h2>
