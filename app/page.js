@@ -6,108 +6,90 @@ export default function Home() {
   return (
     <div className="bg-white text-black">
 
-      {/* Hero — dark */}
+      {/* Hero */}
       <section className="bg-zinc-950 text-white">
-        <div className="max-w-5xl mx-auto px-6 py-36 text-center">
-          <p className="text-sm font-semibold tracking-widest text-zinc-400 uppercase mb-4">
-            Web Design & Development
+        <div className="max-w-4xl mx-auto px-6 py-32">
+          <p className="text-zinc-400 text-sm font-medium mb-6 tracking-wide uppercase">
+            Online Presence for Small Businesses
           </p>
-          <h1 className="text-5xl font-bold leading-tight mb-6">
-            Your business deserves<br />a powerful online presence.
+          <h1 className="text-5xl md:text-6xl font-bold leading-[1.1] mb-8">
+            If people can't find you online,<br className="hidden md:block" /> they're finding someone else.
           </h1>
-          <p className="text-zinc-400 text-lg max-w-xl mx-auto mb-10">
-            We help small businesses build and grow their digital presence — from beautiful websites to strategies that attract real customers.
+          <p className="text-zinc-400 text-lg max-w-lg mb-10 leading-relaxed">
+            I work with small businesses to fix that — websites, Google profiles, and ongoing content. Transparent pricing, no agency markup.
           </p>
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-wrap gap-4">
             <Link
-              href="/mission"
-              className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-zinc-200 transition-colors"
+              href="/contact"
+              className="px-6 py-3 bg-white text-black text-sm font-semibold rounded-lg hover:bg-zinc-200 transition-colors"
             >
-              Learn More
+              Get in Touch
             </Link>
             <Link
-              href="/gallery"
+              href="/services"
               className="px-6 py-3 border border-zinc-600 text-white text-sm font-medium rounded-lg hover:bg-zinc-800 transition-colors"
             >
-              View Our Work
+              See Pricing
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Services — white */}
-      <section className="max-w-5xl mx-auto px-6 py-24">
-        <h2 className="text-3xl font-bold text-center mb-16">What We Do</h2>
+      {/* Services strip */}
+      <section className="border-b border-zinc-100">
+        <div className="max-w-4xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { title: 'Website Design & Setup', price: 'From $500' },
+            { title: 'Google Business Profile', price: 'From $200' },
+            { title: 'Monthly Content', price: 'From $300/mo' },
+            { title: 'Monthly Retainer', price: 'From $400/mo' },
+          ].map((s) => (
+            <div key={s.title}>
+              <p className="font-semibold text-zinc-900 mb-1">{s.title}</p>
+              <p className="text-sm text-zinc-400">{s.price}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* How it works */}
+      <section className="max-w-4xl mx-auto px-6 py-24">
+        <h2 className="text-2xl font-bold mb-12">How it works</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div className="text-center">
-            <div className="w-12 h-12 bg-zinc-100 rounded-xl flex items-center justify-center mx-auto mb-5 text-2xl">
-              🌐
-            </div>
-            <h3 className="font-semibold text-lg mb-2">Website Design</h3>
+          <div>
+            <p className="text-4xl font-bold text-zinc-100 mb-3">1</p>
+            <h3 className="font-semibold mb-2">We talk</h3>
             <p className="text-zinc-500 text-sm leading-relaxed">
-              Custom websites built to reflect your brand and convert visitors into customers.
+              Tell me about your business, what you're struggling with, and what you want. No forms, no sales pitch — just a real conversation.
             </p>
           </div>
-          <div className="text-center">
-            <div className="w-12 h-12 bg-zinc-100 rounded-xl flex items-center justify-center mx-auto mb-5 text-2xl">
-              🚀
-            </div>
-            <h3 className="font-semibold text-lg mb-2">Website Development</h3>
+          <div>
+            <p className="text-4xl font-bold text-zinc-100 mb-3">2</p>
+            <h3 className="font-semibold mb-2">I tell you exactly what you need</h3>
             <p className="text-zinc-500 text-sm leading-relaxed">
-              Fast, reliable, and mobile-friendly sites built with modern technology.
+              I'll give you an honest assessment of what's missing and what would actually make a difference — not a list of everything I can sell you.
             </p>
           </div>
-          <div className="text-center">
-            <div className="w-12 h-12 bg-zinc-100 rounded-xl flex items-center justify-center mx-auto mb-5 text-2xl">
-              📈
-            </div>
-            <h3 className="font-semibold text-lg mb-2">Online Growth</h3>
+          <div>
+            <p className="text-4xl font-bold text-zinc-100 mb-3">3</p>
+            <h3 className="font-semibold mb-2">We get to work</h3>
             <p className="text-zinc-500 text-sm leading-relaxed">
-              Strategies to expand your reach and grow your business online over time.
+              I handle everything. You stay focused on your business while I get your online presence in order.
             </p>
           </div>
         </div>
       </section>
 
-      <div className="border-t border-zinc-100" />
-
-      {/* Why Us — light gray */}
-      <section className="bg-zinc-50">
-        <div className="max-w-5xl mx-auto px-6 py-24">
-          <h2 className="text-3xl font-bold text-center mb-16">Why Work With Us</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white border border-zinc-100 rounded-2xl p-6">
-              <h3 className="font-semibold mb-2">Built for Small Business</h3>
-              <p className="text-zinc-500 text-sm leading-relaxed">
-                We understand the challenges small businesses face and tailor every solution to fit your budget and goals.
-              </p>
-            </div>
-            <div className="bg-white border border-zinc-100 rounded-2xl p-6">
-              <h3 className="font-semibold mb-2">Simple & Transparent</h3>
-              <p className="text-zinc-500 text-sm leading-relaxed">
-                No confusing jargon. We keep you informed every step of the way with clear communication.
-              </p>
-            </div>
-            <div className="bg-white border border-zinc-100 rounded-2xl p-6">
-              <h3 className="font-semibold mb-2">Results That Matter</h3>
-              <p className="text-zinc-500 text-sm leading-relaxed">
-                We focus on outcomes — more visibility, more leads, and more customers for your business.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Banner — dark */}
+      {/* CTA */}
       <section className="bg-zinc-950 text-white">
-        <div className="max-w-5xl mx-auto px-6 py-24 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to get started?</h2>
-          <p className="text-zinc-400 mb-8">
-            Let's build something great for your business.
-          </p>
+        <div className="max-w-4xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div>
+            <h2 className="text-3xl font-bold mb-2">Ready to get started?</h2>
+            <p className="text-zinc-400">No commitment required — just a conversation.</p>
+          </div>
           <Link
             href="/contact"
-            className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-zinc-200 transition-colors"
+            className="shrink-0 px-6 py-3 bg-white text-black text-sm font-semibold rounded-lg hover:bg-zinc-200 transition-colors"
           >
             Get in Touch
           </Link>
