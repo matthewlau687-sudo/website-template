@@ -39,15 +39,15 @@ export default function Home() {
       <section className="border-b border-zinc-100">
         <div className="max-w-4xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { title: 'Website Design & Setup', price: 'From $500' },
-            { title: 'Google Business Profile', price: 'From $200' },
-            { title: 'Monthly Content', price: 'From $300/mo' },
-            { title: 'Monthly Retainer', price: 'From $400/mo' },
+            { title: 'Website Design & Setup', price: 'From $500', href: '/services#website-design' },
+            { title: 'Google Business Profile', price: 'From $200', href: '/services#google-business' },
+            { title: 'Monthly Content', price: 'From $300/mo', href: '/services#monthly-content' },
+            { title: 'Monthly Retainer', price: 'From $400/mo', href: '/services#monthly-retainer' },
           ].map((s) => (
-            <div key={s.title}>
-              <p className="font-semibold text-zinc-900 mb-1">{s.title}</p>
+            <Link key={s.title} href={s.href} className="group">
+              <p className="font-semibold text-zinc-900 mb-1 group-hover:underline underline-offset-2">{s.title}</p>
               <p className="text-sm text-zinc-400">{s.price}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

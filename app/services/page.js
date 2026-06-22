@@ -4,24 +4,28 @@ export const metadata = { title: 'Services — Your Brand' }
 
 const services = [
   {
+    id: 'website-design',
     title: 'Website Design & Setup',
     price: 'Starting at $500',
     description:
       'Your website is the first thing people check before they call. I\'ll build you a clean, professional site that loads fast, looks great on mobile, and actually tells people what you do and how to reach you.',
   },
   {
+    id: 'google-business',
     title: 'Google Business Profile',
     price: 'Starting at $200',
     description:
       'When someone searches for your type of business nearby, your Google listing is what they see first. I\'ll set it up, write it properly, and optimize it so you show up — and look credible when you do.',
   },
   {
+    id: 'monthly-content',
     title: 'Monthly Content',
     price: 'Starting at $300/month',
     description:
       'Staying visible means staying active. I\'ll handle your Google posts and social content on a consistent schedule so your business looks alive and engaged without you having to think about it.',
   },
   {
+    id: 'monthly-retainer',
     title: 'Monthly Retainer',
     price: 'Starting at $400/month',
     description:
@@ -52,7 +56,8 @@ export default function ServicesPage() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="border border-zinc-100 rounded-2xl p-8 hover:border-zinc-300 transition-colors"
+              id={service.id}
+              className="border border-zinc-100 rounded-2xl p-8 hover:border-zinc-300 transition-colors scroll-mt-20"
             >
               <h2 className="text-xl font-bold mb-1">{service.title}</h2>
               <p className="text-sm font-semibold text-zinc-400 mb-4">{service.price}</p>
