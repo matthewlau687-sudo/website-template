@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export const revalidate = 0
 
-export const metadata = { title: 'Portfolio — ExpanBiz' }
+export const metadata = { title: 'Portfolio — ExploBiz' }
 
 export default async function GalleryPage() {
   const images = await client.fetch(galleryQuery)

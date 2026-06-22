@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export const metadata = { title: 'Services — ExpanBiz' }
+export const metadata = { title: 'Services — ExploBiz' }
 
 const services = [
   {
