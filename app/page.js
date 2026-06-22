@@ -7,27 +7,27 @@ export default function Home() {
     <div className="bg-white text-black">
 
       {/* Hero */}
-      <section className="bg-zinc-950 text-white">
+      <section className="bg-blue-950 text-white">
         <div className="max-w-4xl mx-auto px-6 py-32">
-          <p className="text-zinc-400 text-sm font-medium mb-6 tracking-wide uppercase">
+          <p className="text-blue-200 text-sm font-medium mb-6 tracking-wide uppercase">
             Online Presence for Small Businesses
           </p>
           <h1 className="text-5xl md:text-6xl font-bold leading-[1.1] mb-8">
             If people can't find you online,<br className="hidden md:block" /> they're finding someone else.
           </h1>
-          <p className="text-zinc-400 text-lg max-w-lg mb-10 leading-relaxed">
+          <p className="text-blue-200 text-lg max-w-lg mb-10 leading-relaxed">
             I work with small businesses to fix that — websites, Google profiles, and ongoing content. Transparent pricing, no agency markup.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="px-6 py-3 bg-white text-black text-sm font-semibold rounded-lg hover:bg-zinc-200 transition-colors"
+              className="px-6 py-3 bg-white text-black text-sm font-semibold rounded-lg hover:bg-blue-50 transition-colors"
             >
               Get in Touch
             </Link>
             <Link
               href="/services"
-              className="px-6 py-3 border border-zinc-600 text-white text-sm font-medium rounded-lg hover:bg-zinc-800 transition-colors"
+              className="px-6 py-3 border border-blue-700 text-white text-sm font-medium rounded-lg hover:bg-blue-800 transition-colors"
             >
               See Pricing
             </Link>
@@ -46,7 +46,7 @@ export default function Home() {
           ].map((s) => (
             <Link key={s.title} href={s.href} className="group">
               <p className="font-semibold text-zinc-900 mb-1 group-hover:underline underline-offset-2">{s.title}</p>
-              <p className="text-sm text-zinc-400">{s.price}</p>
+              <p className="text-sm text-blue-200">{s.price}</p>
             </Link>
           ))}
         </div>
@@ -64,7 +64,7 @@ export default function Home() {
 
             {/* Template */}
             <div className="bg-white border border-zinc-200 rounded-2xl p-6">
-              <p className="text-xs font-semibold tracking-widest text-zinc-400 uppercase mb-4">Website Builder / Template</p>
+              <p className="text-xs font-semibold tracking-widest text-blue-200 uppercase mb-4">Website Builder / Template</p>
               <ul className="flex flex-col gap-3 text-sm text-zinc-500">
                 {[
                   'You design and build it yourself',
@@ -84,7 +84,7 @@ export default function Home() {
 
             {/* AI Tools */}
             <div className="bg-white border border-zinc-200 rounded-2xl p-6">
-              <p className="text-xs font-semibold tracking-widest text-zinc-400 uppercase mb-4">AI Tools</p>
+              <p className="text-xs font-semibold tracking-widest text-blue-200 uppercase mb-4">AI Tools</p>
               <ul className="flex flex-col gap-3 text-sm text-zinc-500">
                 {[
                   'Output still needs expert editing',
@@ -103,8 +103,8 @@ export default function Home() {
             </div>
 
             {/* Me */}
-            <div className="bg-zinc-950 text-white rounded-2xl p-6">
-              <p className="text-xs font-semibold tracking-widest text-zinc-400 uppercase mb-4">Working With Me</p>
+            <div className="bg-blue-950 text-white rounded-2xl p-6">
+              <p className="text-xs font-semibold tracking-widest text-blue-200 uppercase mb-4">Working With Me</p>
               <ul className="flex flex-col gap-3 text-sm text-zinc-300">
                 {[
                   'Done completely for you',
@@ -131,21 +131,21 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-12">How it works</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <div className="w-10 h-10 rounded-full bg-zinc-900 text-white flex items-center justify-center font-bold text-sm mb-4">1</div>
+            <div className="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-sm mb-4">1</div>
             <h3 className="font-semibold mb-2">We talk</h3>
             <p className="text-zinc-500 text-sm leading-relaxed">
               Tell me about your business, what you're struggling with, and what you want. No forms, no sales pitch — just a real conversation.
             </p>
           </div>
           <div>
-            <div className="w-10 h-10 rounded-full bg-zinc-900 text-white flex items-center justify-center font-bold text-sm mb-4">2</div>
+            <div className="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-sm mb-4">2</div>
             <h3 className="font-semibold mb-2">I tell you exactly what you need</h3>
             <p className="text-zinc-500 text-sm leading-relaxed">
               I'll give you an honest assessment of what's missing and what would actually make a difference — not a list of everything I can sell you.
             </p>
           </div>
           <div>
-            <div className="w-10 h-10 rounded-full bg-zinc-900 text-white flex items-center justify-center font-bold text-sm mb-4">3</div>
+            <div className="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-sm mb-4">3</div>
             <h3 className="font-semibold mb-2">We get to work</h3>
             <p className="text-zinc-500 text-sm leading-relaxed">
               I handle everything. You stay focused on your business while I get your online presence in order.
@@ -155,13 +155,13 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="bg-zinc-950 text-white">
+      <section className="bg-blue-950 text-white">
         <div className="max-w-4xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
             <h2 className="text-3xl font-bold mb-6">Ready to get started?</h2>
             <Link
               href="/contact"
-              className="inline-block px-6 py-3 bg-white text-black text-sm font-semibold rounded-lg hover:bg-zinc-200 transition-colors"
+              className="inline-block px-6 py-3 bg-white text-black text-sm font-semibold rounded-lg hover:bg-blue-50 transition-colors"
             >
               Get in Touch
             </Link>

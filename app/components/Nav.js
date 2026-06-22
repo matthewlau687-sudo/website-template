@@ -21,7 +21,7 @@ export default function Nav() {
   const dark = isHome
 
   return (
-    <nav className={`border-b ${dark ? 'bg-zinc-950 border-zinc-800' : 'bg-white border-zinc-200'}`}>
+    <nav className={`border-b ${dark ? 'bg-blue-950 border-blue-800' : 'bg-white border-zinc-200'}`}>
       <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-14">
         <Link href="/" className={`font-semibold tracking-tight ${dark ? 'text-white' : 'text-zinc-900'}`}>
           Your Brand
@@ -35,7 +35,7 @@ export default function Nav() {
                 dark
                   ? pathname === href
                     ? 'text-white font-medium'
-                    : 'text-zinc-400 hover:text-white'
+                    : 'text-blue-200 hover:text-white'
                   : pathname === href
                   ? 'text-zinc-900 font-medium'
                   : 'text-zinc-500 hover:text-zinc-900'

@@ -38,7 +38,7 @@ export default function ServicesPage() {
     <div className="bg-white text-black">
 
       {/* Dark header */}
-      <section className="bg-zinc-950 text-white">
+      <section className="bg-blue-950 text-white">
         <div className="max-w-3xl mx-auto px-6 py-28 text-center">
           <p className="text-sm font-semibold tracking-widest text-zinc-400 uppercase mb-4">
             What I Offer
@@ -78,7 +78,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="px-6 py-3 bg-zinc-900 text-white text-sm font-medium rounded-lg hover:bg-zinc-700 transition-colors"
+            className="px-6 py-3 bg-blue-900 text-white text-sm font-medium rounded-lg hover:bg-blue-800 transition-colors"
           >
             Let's Talk
           </Link>
@@ -86,7 +86,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-zinc-950 text-white">
+      <section className="bg-blue-950 text-white">
         <div className="max-w-3xl mx-auto px-6 py-24 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to get your business online?</h2>
           <p className="text-zinc-400 mb-8">
@@ -94,7 +94,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-zinc-200 transition-colors"
+            className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-blue-50 transition-colors"
           >
             Get in Touch
           </Link>

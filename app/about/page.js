@@ -15,7 +15,7 @@ export default async function AboutPage() {
     <div className="bg-white text-black">
 
       {/* Dark header */}
-      <section className="bg-zinc-950 text-white">
+      <section className="bg-blue-950 text-white">
         <div className="max-w-3xl mx-auto px-6 py-28 text-center">
           <h1 className="text-4xl font-bold">About Me</h1>
         </div>
@@ -51,7 +51,7 @@ export default async function AboutPage() {
       <div className="border-t border-zinc-100" />
 
       {/* CTA */}
-      <section className="bg-zinc-950 text-white">
+      <section className="bg-blue-950 text-white">
         <div className="max-w-3xl mx-auto px-6 py-24 text-center">
           <h2 className="text-3xl font-bold mb-4">Let's work together.</h2>
           <p className="text-zinc-400 mb-8">
@@ -59,7 +59,7 @@ export default async function AboutPage() {
           </p>
           <Link
             href="/contact"
-            className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-zinc-200 transition-colors"
+            className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-blue-50 transition-colors"
           >
             Get in Touch
           </Link>

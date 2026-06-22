@@ -15,7 +15,7 @@ export default async function GalleryPage() {
     <div className="bg-white text-black">
 
       {/* Dark header */}
-      <section className="bg-zinc-950 text-white">
+      <section className="bg-blue-950 text-white">
         <div className="max-w-5xl mx-auto px-6 py-28 text-center">
           <p className="text-sm font-semibold tracking-widest text-zinc-400 uppercase mb-4">
             Our Work
@@ -65,7 +65,7 @@ export default async function GalleryPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-zinc-950 text-white">
+      <section className="bg-blue-950 text-white">
         <div className="max-w-5xl mx-auto px-6 py-24 text-center">
           <h2 className="text-3xl font-bold mb-4">Want a site like these?</h2>
           <p className="text-zinc-400 mb-8">
@@ -73,7 +73,7 @@ export default async function GalleryPage() {
           </p>
           <Link
             href="/contact"
-            className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-zinc-200 transition-colors"
+            className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-blue-50 transition-colors"
           >
             Work With Us
           </Link>

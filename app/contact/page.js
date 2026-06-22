@@ -33,7 +33,7 @@ export default function ContactPage() {
   if (status === 'success') {
     return (
       <div className="bg-white min-h-screen">
-        <section className="bg-zinc-950 text-white">
+        <section className="bg-blue-950 text-white">
           <div className="max-w-3xl mx-auto px-6 py-28 text-center">
             <h1 className="text-4xl font-bold">Message Sent</h1>
           </div>
@@ -52,7 +52,7 @@ export default function ContactPage() {
     <div className="bg-white text-black">
 
       {/* Dark header */}
-      <section className="bg-zinc-950 text-white">
+      <section className="bg-blue-950 text-white">
         <div className="max-w-3xl mx-auto px-6 py-28 text-center">
           <p className="text-sm font-semibold tracking-widest text-zinc-400 uppercase mb-4">
             Let's Talk
@@ -78,7 +78,7 @@ export default function ContactPage() {
                 onChange={handleChange}
                 required
                 placeholder="Jane Smith"
-                className="w-full border border-zinc-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-zinc-900"
+                className="w-full border border-zinc-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
               />
             </div>
             <div>
@@ -92,7 +92,7 @@ export default function ContactPage() {
                 onChange={handleChange}
                 required
                 placeholder="jane@example.com"
-                className="w-full border border-zinc-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-zinc-900"
+                className="w-full border border-zinc-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
               />
             </div>
           </div>
@@ -107,7 +107,7 @@ export default function ContactPage() {
               value={form.phone}
               onChange={handleChange}
               placeholder="(555) 000-0000"
-              className="w-full border border-zinc-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-zinc-900"
+              className="w-full border border-zinc-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
             />
           </div>
 
@@ -122,7 +122,7 @@ export default function ContactPage() {
               required
               rows={6}
               placeholder="What does your business do? Do you have an existing website? What are you hoping to achieve?"
-              className="w-full border border-zinc-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-zinc-900 resize-y"
+              className="w-full border border-zinc-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 resize-y"
             />
           </div>
 
@@ -135,7 +135,7 @@ export default function ContactPage() {
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="self-start px-6 py-3 bg-zinc-950 text-white text-sm font-medium rounded-lg hover:bg-zinc-700 transition-colors disabled:opacity-50"
+            className="self-start px-6 py-3 bg-blue-950 text-white text-sm font-medium rounded-lg hover:bg-blue-800 transition-colors disabled:opacity-50"
           >
             {status === 'loading' ? 'Sending…' : 'Send Message'}
           </button>
