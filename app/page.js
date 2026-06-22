@@ -57,21 +57,21 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-12">How it works</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <p className="text-4xl font-bold text-zinc-100 mb-3">1</p>
+            <div className="w-10 h-10 rounded-full bg-zinc-900 text-white flex items-center justify-center font-bold text-sm mb-4">1</div>
             <h3 className="font-semibold mb-2">We talk</h3>
             <p className="text-zinc-500 text-sm leading-relaxed">
               Tell me about your business, what you're struggling with, and what you want. No forms, no sales pitch — just a real conversation.
             </p>
           </div>
           <div>
-            <p className="text-4xl font-bold text-zinc-100 mb-3">2</p>
+            <div className="w-10 h-10 rounded-full bg-zinc-900 text-white flex items-center justify-center font-bold text-sm mb-4">2</div>
             <h3 className="font-semibold mb-2">I tell you exactly what you need</h3>
             <p className="text-zinc-500 text-sm leading-relaxed">
               I'll give you an honest assessment of what's missing and what would actually make a difference — not a list of everything I can sell you.
             </p>
           </div>
           <div>
-            <p className="text-4xl font-bold text-zinc-100 mb-3">3</p>
+            <div className="w-10 h-10 rounded-full bg-zinc-900 text-white flex items-center justify-center font-bold text-sm mb-4">3</div>
             <h3 className="font-semibold mb-2">We get to work</h3>
             <p className="text-zinc-500 text-sm leading-relaxed">
               I handle everything. You stay focused on your business while I get your online presence in order.
