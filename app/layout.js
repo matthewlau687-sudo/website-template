@@ -8,7 +8,7 @@ const geistSans = Geist({
 });
 
 export const metadata = {
-  title: "Your Brand — Web Design for Small Business",
+  title: "ExpanBiz — Web Design for Small Business",
   description: "We help small businesses build and grow their online presence.",
 };
 

@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export const revalidate = 0
 
-export const metadata = { title: 'About Me — Your Brand' }
+export const metadata = { title: 'About Me — ExpanBiz' }
 
 export default async function AboutPage() {
   const about = await client.fetch(aboutQuery)

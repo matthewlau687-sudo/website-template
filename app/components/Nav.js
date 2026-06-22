@@ -24,7 +24,7 @@ export default function Nav() {
     <nav className={`border-b ${dark ? 'bg-blue-950 border-blue-800' : 'bg-white border-zinc-200'}`}>
       <div className="max-w-5xl mx-auto px-6 flex items-center justify-between h-14">
         <Link href="/" className={`font-semibold tracking-tight ${dark ? 'text-white' : 'text-zinc-900'}`}>
-          Your Brand
+          ExpanBiz
         </Link>
         <div className="flex gap-6">
           {links.map(({ href, label }) => (
