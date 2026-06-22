@@ -67,23 +67,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <div className="border-t border-zinc-100" />
-
-      {/* FAQ-style note */}
-      <section className="bg-zinc-50">
-        <div className="max-w-3xl mx-auto px-6 py-16 text-center">
-          <h2 className="text-xl font-bold mb-3">Not sure which service is right for you?</h2>
-          <p className="text-zinc-500 mb-8">
-            Every business is different. Reach out and I'll help you figure out exactly what you need — no pressure, no upsell.
-          </p>
-          <Link
-            href="/contact"
-            className="px-6 py-3 bg-blue-900 text-white text-sm font-medium rounded-lg hover:bg-blue-800 transition-colors"
-          >
-            Let's Talk
-          </Link>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="bg-blue-950 text-white">
