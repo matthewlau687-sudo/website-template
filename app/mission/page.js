@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export const metadata = { title: 'Our Mission — ExploBiz' }
+export const metadata = { title: 'Our Mission — Global Point Partners' }
 
 export default function MissionPage() {
   return (

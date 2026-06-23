@@ -8,7 +8,7 @@ const geistSans = Geist({
 });
 
 export const metadata = {
-  title: "ExploBiz — Web Design for Small Business",
+  title: "Global Point Partners — Web Design for Small Business",
   description: "We help small businesses build and grow their online presence.",
 };
 
