@@ -35,7 +35,7 @@ export default function Nav() {
                 dark
                   ? pathname === href
                     ? 'text-white font-medium'
-                    : 'text-blue-200 hover:text-white'
+                    : 'text-zinc-200 hover:text-white'
                   : pathname === href
                   ? 'text-zinc-900 font-medium'
                   : 'text-zinc-500 hover:text-zinc-900'

@@ -9,13 +9,13 @@ export default function Home() {
       {/* Hero */}
       <section className="bg-blue-950 text-white">
         <div className="max-w-4xl mx-auto px-6 py-32">
-          <p className="text-blue-200 text-sm font-medium mb-6 tracking-wide uppercase">
+          <p className="text-white text-sm font-medium mb-6 tracking-wide uppercase">
             Online Presence for Small Businesses
           </p>
           <h1 className="text-5xl md:text-6xl font-bold leading-[1.1] mb-8">
             If people can't find you online,<br className="hidden md:block" /> they're finding someone else.
           </h1>
-          <p className="text-blue-200 text-lg max-w-lg mb-10 leading-relaxed">
+          <p className="text-zinc-300 text-lg max-w-lg mb-10 leading-relaxed">
             I work with small businesses to fix that — websites, Google profiles, and ongoing content. Transparent pricing, no agency markup.
           </p>
           <div className="flex flex-wrap gap-4">
@@ -64,7 +64,7 @@ export default function Home() {
 
             {/* Template */}
             <div className="bg-white border border-zinc-200 rounded-2xl p-6">
-              <p className="text-xs font-semibold tracking-widest text-blue-200 uppercase mb-4">Website Builder / Template</p>
+              <p className="text-xs font-semibold tracking-widest text-zinc-900 uppercase mb-4">Website Builder / Template</p>
               <ul className="flex flex-col gap-3 text-sm text-zinc-500">
                 {[
                   'You design and build it yourself',
@@ -84,7 +84,7 @@ export default function Home() {
 
             {/* AI Tools */}
             <div className="bg-white border border-zinc-200 rounded-2xl p-6">
-              <p className="text-xs font-semibold tracking-widest text-blue-200 uppercase mb-4">AI Tools</p>
+              <p className="text-xs font-semibold tracking-widest text-zinc-900 uppercase mb-4">AI Tools</p>
               <ul className="flex flex-col gap-3 text-sm text-zinc-500">
                 {[
                   'Output still needs expert editing',
@@ -104,7 +104,7 @@ export default function Home() {
 
             {/* Me */}
             <div className="bg-blue-950 text-white rounded-2xl p-6">
-              <p className="text-xs font-semibold tracking-widest text-blue-200 uppercase mb-4">Working With Me</p>
+              <p className="text-xs font-semibold tracking-widest text-white uppercase mb-4">Working With Me</p>
               <ul className="flex flex-col gap-3 text-sm text-zinc-300">
                 {[
                   'Done completely for you',
