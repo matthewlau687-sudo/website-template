@@ -46,7 +46,7 @@ export default function Home() {
           ].map((s) => (
             <Link key={s.title} href={s.href} className="group">
               <p className="font-semibold text-zinc-900 mb-1 group-hover:underline underline-offset-2">{s.title}</p>
-              <p className="text-sm text-blue-200">{s.price}</p>
+              <p className="text-sm text-zinc-900">{s.price}</p>
             </Link>
           ))}
         </div>
