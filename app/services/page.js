@@ -2,34 +2,49 @@ import Link from 'next/link'
 
 export const metadata = { title: 'Services — Global Point Partners' }
 
-const services = [
+const plans = [
   {
-    id: 'website-design',
-    title: 'Website Design & Setup',
-    price: 'Starting at $500/month',
-    description:
-      'Your website is often the first impression a potential customer has of your business. Your subscription covers design, build, hosting, domain costs, and ongoing maintenance so your site stays live and up to date without you having to manage any of it.',
+    name: 'Basic',
+    price: '$149',
+    description: 'Everything you need to get your business online professionally.',
+    features: [
+      'Custom website design & setup',
+      'Website hosting included',
+      'Domain included',
+      'Mobile-friendly design',
+      'Up to 2 edits per month',
+      'Email support',
+    ],
+    cta: 'Get Started',
+    highlight: false,
   },
   {
-    id: 'google-business',
-    title: 'Google Business Profile',
-    price: 'Starting at $200/month',
-    description:
-      'When someone searches for your type of business nearby, your Google listing is one of the first things they see. Your subscription covers setup, optimization, and ongoing management so your profile stays accurate and active.',
+    name: 'Standard',
+    price: '$249',
+    description: 'Expand your reach with Google and keep your content fresh.',
+    features: [
+      'Everything in Basic',
+      'Google Business Profile setup & optimization',
+      'Monthly Google post updates',
+      'Up to 5 edits per month',
+      'Priority email support',
+    ],
+    cta: 'Get Started',
+    highlight: true,
   },
   {
-    id: 'monthly-content',
-    title: 'Monthly Content',
-    price: 'Starting at $300/month',
-    description:
-      'Maintaining visibility online requires consistent activity. Your subscription includes regular Google posts and social content managed on your behalf, keeping your business looking active and engaged every month.',
-  },
-  {
-    id: 'monthly-retainer',
-    title: 'Monthly Retainer',
-    price: 'Starting at $400/month',
-    description:
-      'The all-in package. Your subscription covers website hosting and maintenance, Google Business management, monthly content, and a dedicated point of contact for any updates or questions that come up.',
+    name: 'Premium',
+    price: '$399',
+    description: 'Full-service management for businesses serious about growth.',
+    features: [
+      'Everything in Standard',
+      'Social media content (2 platforms)',
+      'Unlimited edits',
+      'Monthly performance check-in',
+      'Priority support with same-day response',
+    ],
+    cta: 'Get Started',
+    highlight: false,
   },
 ]
 
@@ -39,40 +54,86 @@ export default function ServicesPage() {
 
       {/* Dark header */}
       <section className="bg-blue-950 text-white">
-        <div className="max-w-3xl mx-auto px-6 py-28 text-center">
+        <div className="max-w-4xl mx-auto px-6 py-28 text-center">
           <p className="text-sm font-semibold tracking-widest text-zinc-300 uppercase mb-4">
-            What We Offer
+            Pricing
           </p>
-          <h1 className="text-4xl font-bold mb-6">Services</h1>
+          <h1 className="text-4xl font-bold mb-6">Simple, Subscription-Based Plans</h1>
           <p className="text-zinc-300 text-lg max-w-xl mx-auto">
-            Everything a small business needs to get found online, look professional, and stay visible over time.
+            No hidden fees. No one-time builds that disappear. Your online presence stays live, maintained, and improving every month.
           </p>
         </div>
       </section>
 
-      {/* Services */}
-      <section className="max-w-4xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.map((service) => (
+      {/* Pricing cards */}
+      <section className="max-w-5xl mx-auto px-6 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          {plans.map((plan) => (
             <div
-              key={service.title}
-              id={service.id}
-              className="border border-zinc-100 rounded-2xl p-8 hover:border-zinc-300 transition-colors scroll-mt-20"
+              key={plan.name}
+              className={`rounded-2xl border p-8 flex flex-col gap-6 ${
+                plan.highlight
+                  ? 'bg-blue-950 text-white border-blue-900'
+                  : 'bg-white text-black border-zinc-200'
+              }`}
             >
-              <h2 className="text-xl font-bold mb-1">{service.title}</h2>
-              <p className="text-sm font-semibold text-zinc-400 mb-4">{service.price}</p>
-              <p className="text-zinc-500 text-sm leading-relaxed">{service.description}</p>
+              {/* Plan header */}
+              <div>
+                {plan.highlight && (
+                  <p className="text-xs font-semibold tracking-widest text-blue-300 uppercase mb-2">Most Popular</p>
+                )}
+                <h2 className={`text-xl font-bold mb-1 ${plan.highlight ? 'text-white' : 'text-zinc-900'}`}>
+                  {plan.name}
+                </h2>
+                <p className={`text-sm leading-relaxed ${plan.highlight ? 'text-zinc-300' : 'text-zinc-500'}`}>
+                  {plan.description}
+                </p>
+              </div>
+
+              {/* Price */}
+              <div>
+                <span className={`text-4xl font-bold ${plan.highlight ? 'text-white' : 'text-zinc-900'}`}>
+                  {plan.price}
+                </span>
+                <span className={`text-sm ml-1 ${plan.highlight ? 'text-zinc-300' : 'text-zinc-400'}`}>/month</span>
+              </div>
+
+              {/* Features */}
+              <ul className="flex flex-col gap-3">
+                {plan.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2 text-sm">
+                    <span className={`mt-0.5 ${plan.highlight ? 'text-blue-300' : 'text-blue-600'}`}>✓</span>
+                    <span className={plan.highlight ? 'text-zinc-300' : 'text-zinc-600'}>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* CTA */}
+              <Link
+                href="/contact"
+                className={`mt-auto text-center px-5 py-3 rounded-lg text-sm font-medium transition-colors ${
+                  plan.highlight
+                    ? 'bg-white text-blue-950 hover:bg-blue-50'
+                    : 'bg-blue-950 text-white hover:bg-blue-800'
+                }`}
+              >
+                {plan.cta}
+              </Link>
             </div>
           ))}
         </div>
+
+        <p className="text-center text-zinc-400 text-sm mt-10">
+          All plans include a setup period of 1 to 2 weeks before your site goes live. Cancel anytime with 30 days notice.
+        </p>
       </section>
 
       {/* CTA */}
       <section className="bg-blue-950 text-white">
         <div className="max-w-3xl mx-auto px-6 py-24 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to get your business online?</h2>
+          <h2 className="text-3xl font-bold mb-4">Not sure which plan is right for you?</h2>
           <p className="text-zinc-300 mb-8">
-            Contact us to discuss which service is the right fit for your business.
+            Reach out and I will help you figure out the best fit for your business and budget.
           </p>
           <Link
             href="/contact"

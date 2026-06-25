@@ -5,14 +5,14 @@ import { useState } from 'react'
 
 const faqs = [
   {
-    question: 'How does the subscription work?',
+    question: 'What plans do you offer?',
     answer:
-      'All services are offered on a monthly subscription basis. This covers your website hosting, domain costs, ongoing maintenance, and any updates or content management included in your plan. As long as you are subscribed, your online presence stays live, up to date, and actively managed.',
+      'There are three plans: Basic ($149/mo), Standard ($249/mo), and Premium ($399/mo). Basic covers your custom website, hosting, domain, and up to 2 edits per month. Standard adds Google Business Profile management and monthly content updates. Premium includes everything in Standard plus social media content, unlimited edits, and priority support.',
   },
   {
     question: 'Why is this a subscription and not a one-time payment?',
     answer:
-      'Running a professional online presence has ongoing costs — domain registration, hosting, security, and content management all require continuous work and payment. A subscription model means I can keep everything running smoothly on your behalf without you having to think about it.',
+      'Running a professional online presence has real ongoing costs — domain registration, hosting, security, and content management all require continuous work. A subscription means I handle all of that for you every month so your business stays live and up to date without you having to think about it.',
   },
   {
     question: 'How long does it take to get set up?',
@@ -25,9 +25,14 @@ const faqs = [
       'Just reach out. I will ask you a few questions about your business, your goals, and what you are looking for. From there I put together a clear plan and we go from there. No technical knowledge required on your end.',
   },
   {
+    question: 'Can I upgrade or downgrade my plan?',
+    answer:
+      'Yes. You can switch plans at any time. Upgrades take effect immediately and downgrades apply at the start of your next billing cycle.',
+  },
+  {
     question: 'Can I cancel at any time?',
     answer:
-      'Yes. There are no long-term contracts. If you decide to cancel, I ask for 30 days notice so I can wrap things up cleanly and hand over anything you need to keep your site running independently.',
+      'Yes. There are no long-term contracts. If you decide to cancel, I ask for 30 days notice so I can wrap things up cleanly and hand over anything you need.',
   },
   {
     question: 'What happens to my website if I cancel?',
@@ -42,17 +47,12 @@ const faqs = [
   {
     question: 'What is a Google Business Profile and why do I need one?',
     answer:
-      'A Google Business Profile is the listing that appears when someone searches for your business or a similar business on Google. It shows your hours, phone number, location, photos, and reviews. Having it set up and optimized is one of the most effective ways to get found by local customers.',
-  },
-  {
-    question: 'Can I make changes to my website after it launches?',
-    answer:
-      'Yes. Updates and edits are included as part of your subscription. Just send me a message and I will take care of it.',
+      'A Google Business Profile is the listing that appears when someone searches for your business or a similar business on Google. It shows your hours, phone number, location, photos, and reviews. It is included in the Standard and Premium plans and is one of the most effective ways to get found by local customers.',
   },
   {
     question: 'How does billing work?',
     answer:
-      'Your subscription is billed monthly. The first month covers the setup and launch of your website. After that, billing renews on the same date each month. I will walk you through everything during our initial conversation.',
+      'Your subscription is billed monthly starting on the day you sign up. The first month covers your setup and launch. After that, billing renews automatically on the same date each month.',
   },
 ]
 

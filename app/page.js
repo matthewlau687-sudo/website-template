@@ -35,14 +35,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services strip */}
+      {/* Plans strip */}
       <section className="border-b border-zinc-100">
-        <div className="max-w-4xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-4xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-3 gap-8">
           {[
-            { title: 'Website Design & Setup', price: 'From $500/mo', href: '/services#website-design' },
-            { title: 'Google Business Profile', price: 'From $200/mo', href: '/services#google-business' },
-            { title: 'Monthly Content', price: 'From $300/mo', href: '/services#monthly-content' },
-            { title: 'Monthly Retainer', price: 'From $400/mo', href: '/services#monthly-retainer' },
+            { title: 'Basic', price: '$149/mo', href: '/services' },
+            { title: 'Standard', price: '$249/mo', href: '/services' },
+            { title: 'Premium', price: '$399/mo', href: '/services' },
           ].map((s) => (
             <Link key={s.title} href={s.href} className="group">
               <p className="font-semibold text-zinc-900 mb-1 group-hover:underline underline-offset-2">{s.title}</p>
