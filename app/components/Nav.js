@@ -10,6 +10,7 @@ const links = [
   { href: '/gallery', label: 'Portfolio' },
   { href: '/mission', label: 'Our Mission' },
   { href: '/about', label: 'About Me' },
+  { href: '/faq', label: 'FAQ' },
   { href: '/contact', label: 'Contact' },
 ]
 

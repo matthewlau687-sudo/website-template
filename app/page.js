@@ -134,7 +134,7 @@ export default function Home() {
             <div className="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-sm mb-4">1</div>
             <h3 className="font-semibold mb-2">We connect</h3>
             <p className="text-zinc-500 text-sm leading-relaxed">
-              Share details about your business, your goals, and what you are looking to achieve. Our team listens carefully and asks the right questions to fully understand your needs.
+              Share details about your business, your goals, and what you are looking to achieve. I listen carefully and ask the right questions to fully understand your needs.
             </p>
           </div>
           <div>
@@ -148,7 +148,7 @@ export default function Home() {
             <div className="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-sm mb-4">3</div>
             <h3 className="font-semibold mb-2">We get to work</h3>
             <p className="text-zinc-500 text-sm leading-relaxed">
-              Our team handles everything from start to finish. You stay focused on running your business while we build and strengthen your online presence.
+              I handle everything from start to finish. You stay focused on running your business while I build and strengthen your online presence.
             </p>
           </div>
         </div>

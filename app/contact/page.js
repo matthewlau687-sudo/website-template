@@ -41,7 +41,7 @@ export default function ContactPage() {
         <div className="max-w-xl mx-auto px-6 py-20 text-center">
           <p className="text-xl font-semibold text-zinc-900 mb-3">Thank you for reaching out.</p>
           <p className="text-zinc-500">
-            A member of our team will review your message and respond within 24 hours.
+            I will review your message and respond within 24 hours.
           </p>
         </div>
       </div>
