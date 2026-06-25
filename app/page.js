@@ -86,7 +86,7 @@ export default function Home() {
                 {[
                   'You design and build it yourself',
                   'Looks like thousands of other sites',
-                  'Monthly subscription fees add up',
+                  'Fees with no ongoing management included',
                   'No Google Business setup included',
                   'No strategy or guidance provided',
                   'No support when issues arise',
@@ -126,7 +126,7 @@ export default function Home() {
                 {[
                   'Fully managed and handled for you',
                   'Built specifically for your business',
-                  'Transparent one-time or monthly pricing',
+                  'Simple, transparent monthly pricing',
                   'Google Business setup included',
                   'Strategy tailored to your goals',
                   'Ongoing support whenever you need it',
