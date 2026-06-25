@@ -9,14 +9,14 @@ export default function MissionPage() {
       {/* Dark header */}
       <section className="bg-blue-950 text-white">
         <div className="max-w-3xl mx-auto px-6 py-28 text-center">
-          <p className="text-sm font-semibold tracking-widest text-zinc-400 uppercase mb-4">
-            Why I Started This
+          <p className="text-sm font-semibold tracking-widest text-zinc-300 uppercase mb-4">
+            Why We Started
           </p>
           <h1 className="text-4xl font-bold mb-6">
-            I built this because good businesses were being overlooked.
+            Strong businesses were being overlooked simply because they lacked an online presence.
           </h1>
-          <p className="text-zinc-400 text-lg leading-relaxed">
-            Not because they weren't good at what they do — but because nobody could find them online.
+          <p className="text-zinc-300 text-lg leading-relaxed">
+            Our mission is to change that by making professional digital services accessible to every small business.
           </p>
         </div>
       </section>
@@ -25,37 +25,37 @@ export default function MissionPage() {
       <section className="max-w-3xl mx-auto px-6 py-20">
         <h2 className="text-xl font-bold mb-5">The reality for most small businesses</h2>
         <p className="text-zinc-500 leading-relaxed">
-          You're great at your craft. Your customers love you. But when someone searches for what you offer, you're nowhere to be found. No Google listing, an outdated website, or nothing at all. And the business down the street — maybe not even as good as yours — is showing up first because they got their online presence in order.
+          Many business owners are exceptional at what they do and have earned the loyalty of their customers. Yet when a potential client searches online for the services they offer, those businesses are nowhere to be found. Whether it is an outdated website, the absence of a Google Business listing, or no online presence at all, the gap is costing them real customers every day. Meanwhile, competitors with a stronger digital presence continue to capture that business instead.
         </p>
-        <p className="text-zinc-900 font-semibold mt-6 text-lg">That's the gap I'm here to close.</p>
+        <p className="text-zinc-900 font-semibold mt-6 text-lg">That is the gap Global Point Partners exists to close.</p>
       </section>
 
       <div className="border-t border-zinc-100" />
 
-      {/* What I Do + What to Expect */}
+      {/* What We Do + What to Expect */}
       <section className="bg-zinc-50">
         <div className="max-w-3xl mx-auto px-6 py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-xl font-bold mb-5">What I actually do</h2>
+              <h2 className="text-xl font-bold mb-5">What we do</h2>
               <p className="text-zinc-500 leading-relaxed">
-                I work directly with small business owners to get the basics right — a website that looks professional, a Google profile that shows up when people are searching, and content that keeps you visible over time. No bloated agency packages. No handing you off to someone junior. Just straightforward work that helps real customers find you.
+                We work directly with small business owners to establish the fundamentals of a strong online presence. This includes building professional websites, setting up and optimizing Google Business profiles, and managing ongoing content to keep businesses visible and credible over time. Every engagement is handled with care and tailored to the specific needs of the business we are serving.
               </p>
             </div>
             <div>
-              <h2 className="text-xl font-bold mb-5">What you can expect from me</h2>
+              <h2 className="text-xl font-bold mb-5">What you can expect from us</h2>
               <ul className="flex flex-col gap-4">
                 <li>
-                  <p className="font-semibold text-zinc-900">Honesty</p>
-                  <p className="text-zinc-500 text-sm leading-relaxed">I'll tell you what you actually need, not what sounds impressive.</p>
+                  <p className="font-semibold text-zinc-900">Transparency</p>
+                  <p className="text-zinc-500 text-sm leading-relaxed">We provide honest recommendations based on what your business actually needs, not what generates the most revenue for us.</p>
                 </li>
                 <li>
                   <p className="font-semibold text-zinc-900">Consistency</p>
-                  <p className="text-zinc-500 text-sm leading-relaxed">I don't build something and disappear. If you're on a retainer, I'm in your corner month to month.</p>
+                  <p className="text-zinc-500 text-sm leading-relaxed">We build lasting relationships with our clients. For those on a retainer, we remain actively engaged in supporting your growth month after month.</p>
                 </li>
                 <li>
-                  <p className="font-semibold text-zinc-900">Results you can see</p>
-                  <p className="text-zinc-500 text-sm leading-relaxed">More calls, more profile views, more people walking through your door.</p>
+                  <p className="font-semibold text-zinc-900">Measurable results</p>
+                  <p className="text-zinc-500 text-sm leading-relaxed">More calls, increased profile visibility, and more customers walking through your door.</p>
                 </li>
               </ul>
             </div>
@@ -66,9 +66,9 @@ export default function MissionPage() {
       {/* CTA */}
       <section className="bg-blue-950 text-white">
         <div className="max-w-3xl mx-auto px-6 py-24 text-center">
-          <h2 className="text-3xl font-bold mb-4">Sound like a fit?</h2>
-          <p className="text-zinc-400 mb-8">
-            Let's talk about what we can build for your business.
+          <h2 className="text-3xl font-bold mb-4">Ready to grow your online presence?</h2>
+          <p className="text-zinc-300 mb-8">
+            Contact us today to discuss what Global Point Partners can do for your business.
           </p>
           <Link
             href="/contact"

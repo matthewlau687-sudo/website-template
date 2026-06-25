@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export const revalidate = 0
 
-export const metadata = { title: 'About Me — Global Point Partners' }
+export const metadata = { title: 'About — Global Point Partners' }
 
 export default async function AboutPage() {
   const about = await client.fetch(aboutQuery)
@@ -17,7 +17,7 @@ export default async function AboutPage() {
       {/* Dark header */}
       <section className="bg-blue-950 text-white">
         <div className="max-w-3xl mx-auto px-6 py-28 text-center">
-          <h1 className="text-4xl font-bold">About Me</h1>
+          <h1 className="text-4xl font-bold">About</h1>
         </div>
       </section>
 
@@ -43,7 +43,7 @@ export default async function AboutPage() {
         )}
         {!about?.bio && (
           <p className="text-zinc-600 leading-relaxed mb-10">
-            I started this business because I believe every small business owner deserves a professional online presence — without the headaches or high costs that usually come with it. I work directly with each client to understand their goals and build something that truly represents their business.
+            Global Point Partners was founded on the belief that every small business deserves a professional online presence. We work closely with each client to understand their goals and deliver solutions that accurately represent their business and attract real customers.
           </p>
         )}
       </section>
@@ -53,9 +53,9 @@ export default async function AboutPage() {
       {/* CTA */}
       <section className="bg-blue-950 text-white">
         <div className="max-w-3xl mx-auto px-6 py-24 text-center">
-          <h2 className="text-3xl font-bold mb-4">Let's work together.</h2>
-          <p className="text-zinc-400 mb-8">
-            Have a project in mind? I'd love to hear about it.
+          <h2 className="text-3xl font-bold mb-4">Interested in working together?</h2>
+          <p className="text-zinc-300 mb-8">
+            Reach out and let us know how we can support your business.
           </p>
           <Link
             href="/contact"

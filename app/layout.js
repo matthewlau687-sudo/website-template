@@ -1,11 +1,5 @@
-import { Geist } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/Nav";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Global Point Partners — Web Design for Small Business",
@@ -14,8 +8,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-zinc-50 font-sans">
+    <html lang="en" className="h-full antialiased">
+      <body className="min-h-full flex flex-col bg-zinc-50">
         <Nav />
         <main className="flex-1 bg-white">{children}</main>
       </body>

@@ -8,28 +8,28 @@ const services = [
     title: 'Website Design & Setup',
     price: 'Starting at $500',
     description:
-      'Your website is the first thing people check before they call. I\'ll build you a clean, professional site that loads fast, looks great on mobile, and actually tells people what you do and how to reach you.',
+      'Your website is often the first impression a potential customer has of your business. We design and build clean, professional websites that load quickly, display properly on all devices, and clearly communicate who you are and how to reach you.',
   },
   {
     id: 'google-business',
     title: 'Google Business Profile',
     price: 'Starting at $200',
     description:
-      'When someone searches for your type of business nearby, your Google listing is what they see first. I\'ll set it up, write it properly, and optimize it so you show up — and look credible when you do.',
+      'When someone searches for your type of business nearby, your Google listing is one of the first things they see. We set it up correctly, write compelling content, and optimize it so your business appears in local searches and makes a strong first impression.',
   },
   {
     id: 'monthly-content',
     title: 'Monthly Content',
     price: 'Starting at $300/month',
     description:
-      'Staying visible means staying active. I\'ll handle your Google posts and social content on a consistent schedule so your business looks alive and engaged without you having to think about it.',
+      'Maintaining visibility online requires consistent activity. We manage your Google posts and social content on a regular schedule, keeping your business looking active and engaged without requiring any additional time from you.',
   },
   {
     id: 'monthly-retainer',
     title: 'Monthly Retainer',
     price: 'Starting at $400/month',
     description:
-      'For businesses that want everything handled ongoing — content, updates, profile maintenance, and a point of contact when something needs attention.',
+      'For businesses that want comprehensive ongoing support, our retainer package covers content management, profile maintenance, website updates, and a dedicated point of contact whenever you need assistance.',
   },
 ]
 
@@ -40,12 +40,12 @@ export default function ServicesPage() {
       {/* Dark header */}
       <section className="bg-blue-950 text-white">
         <div className="max-w-3xl mx-auto px-6 py-28 text-center">
-          <p className="text-sm font-semibold tracking-widest text-zinc-400 uppercase mb-4">
-            What I Offer
+          <p className="text-sm font-semibold tracking-widest text-zinc-300 uppercase mb-4">
+            What We Offer
           </p>
           <h1 className="text-4xl font-bold mb-6">Services</h1>
-          <p className="text-zinc-400 text-lg max-w-xl mx-auto">
-            Everything a small business needs to get found online, look professional, and stay visible — without the agency price tag.
+          <p className="text-zinc-300 text-lg max-w-xl mx-auto">
+            Everything a small business needs to get found online, look professional, and stay visible over time.
           </p>
         </div>
       </section>
@@ -67,13 +67,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
-
       {/* CTA */}
       <section className="bg-blue-950 text-white">
         <div className="max-w-3xl mx-auto px-6 py-24 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to get your business online?</h2>
-          <p className="text-zinc-400 mb-8">
-            Let's find the right package for where you are and where you want to go.
+          <p className="text-zinc-300 mb-8">
+            Contact us to discuss which service is the right fit for your business.
           </p>
           <Link
             href="/contact"

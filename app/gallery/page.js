@@ -17,14 +17,14 @@ export default async function GalleryPage() {
       {/* Dark header */}
       <section className="bg-blue-950 text-white">
         <div className="max-w-5xl mx-auto px-6 py-28 text-center">
-          <p className="text-sm font-semibold tracking-widest text-zinc-400 uppercase mb-4">
+          <p className="text-sm font-semibold tracking-widest text-zinc-300 uppercase mb-4">
             Our Work
           </p>
           <h1 className="text-4xl font-bold mb-6">
-            Results speak louder than promises.
+            Portfolio
           </h1>
-          <p className="text-zinc-400 text-lg max-w-xl mx-auto">
-            Browse our portfolio of websites built for real small businesses — each one designed to attract customers and drive growth.
+          <p className="text-zinc-300 text-lg max-w-xl mx-auto">
+            A selection of websites and digital projects we have delivered for small businesses across a range of industries.
           </p>
         </div>
       </section>
@@ -67,15 +67,15 @@ export default async function GalleryPage() {
       {/* CTA */}
       <section className="bg-blue-950 text-white">
         <div className="max-w-5xl mx-auto px-6 py-24 text-center">
-          <h2 className="text-3xl font-bold mb-4">Want a site like these?</h2>
-          <p className="text-zinc-400 mb-8">
-            Let's build something you're proud to show off.
+          <h2 className="text-3xl font-bold mb-4">Interested in a professional website for your business?</h2>
+          <p className="text-zinc-300 mb-8">
+            Contact us to discuss your project and receive a custom proposal.
           </p>
           <Link
             href="/contact"
             className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-blue-50 transition-colors"
           >
-            Work With Us
+            Get in Touch
           </Link>
         </div>
       </section>

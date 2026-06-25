@@ -35,13 +35,13 @@ export default function ContactPage() {
       <div className="bg-white min-h-screen">
         <section className="bg-blue-950 text-white">
           <div className="max-w-3xl mx-auto px-6 py-28 text-center">
-            <h1 className="text-4xl font-bold">Message Sent</h1>
+            <h1 className="text-4xl font-bold">Message Received</h1>
           </div>
         </section>
         <div className="max-w-xl mx-auto px-6 py-20 text-center">
-          <p className="text-xl font-semibold text-zinc-900 mb-3">Thanks for reaching out!</p>
+          <p className="text-xl font-semibold text-zinc-900 mb-3">Thank you for reaching out.</p>
           <p className="text-zinc-500">
-            I've received your message and will get back to you as soon as possible.
+            A member of our team will review your message and respond within 24 hours.
           </p>
         </div>
       </div>
@@ -54,12 +54,12 @@ export default function ContactPage() {
       {/* Dark header */}
       <section className="bg-blue-950 text-white">
         <div className="max-w-3xl mx-auto px-6 py-28 text-center">
-          <p className="text-sm font-semibold tracking-widest text-zinc-400 uppercase mb-4">
-            Let's Talk
+          <p className="text-sm font-semibold tracking-widest text-zinc-300 uppercase mb-4">
+            Contact Us
           </p>
           <h1 className="text-4xl font-bold mb-6">Get in Touch</h1>
-          <p className="text-zinc-400 text-lg">
-            Tell me about your business and what you're looking to achieve. I'll get back to you within 24 hours.
+          <p className="text-zinc-300 text-lg">
+            Tell us about your business and what you are looking to achieve. We will respond within 24 hours.
           </p>
         </div>
       </section>
@@ -113,7 +113,7 @@ export default function ContactPage() {
 
           <div>
             <label className="block text-sm font-medium text-zinc-700 mb-1">
-              Tell me about your project <span className="text-red-500">*</span>
+              Tell us about your project <span className="text-red-500">*</span>
             </label>
             <textarea
               name="message"
@@ -137,7 +137,7 @@ export default function ContactPage() {
             disabled={status === 'loading'}
             className="self-start px-6 py-3 bg-blue-950 text-white text-sm font-medium rounded-lg hover:bg-blue-800 transition-colors disabled:opacity-50"
           >
-            {status === 'loading' ? 'Sending…' : 'Send Message'}
+            {status === 'loading' ? 'Sending...' : 'Send Message'}
           </button>
         </form>
       </section>

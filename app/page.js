@@ -13,10 +13,10 @@ export default function Home() {
             Online Presence for Small Businesses
           </p>
           <h1 className="text-5xl md:text-6xl font-bold leading-[1.1] mb-8">
-            If people can't find you online,<br className="hidden md:block" /> they're finding someone else.
+            If people cannot find you online,<br className="hidden md:block" /> they are finding someone else.
           </h1>
           <p className="text-zinc-300 text-lg max-w-lg mb-10 leading-relaxed">
-            I work with small businesses to fix that — websites, Google profiles, and ongoing content. Transparent pricing, no agency markup.
+            Global Point Partners helps small businesses establish and grow their digital presence through professional websites, Google Business optimization, and consistent content management.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
@@ -57,7 +57,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6 py-24">
           <h2 className="text-2xl font-bold mb-3">Why not just use a template or AI?</h2>
           <p className="text-zinc-500 mb-12 max-w-xl">
-            Fair question. Here's the honest difference.
+            It is a fair question. Here is the difference.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -70,9 +70,9 @@ export default function Home() {
                   'You design and build it yourself',
                   'Looks like thousands of other sites',
                   'Monthly subscription fees add up',
-                  'No Google Business setup',
-                  'No strategy — just a blank page',
-                  "You're on your own if something breaks",
+                  'No Google Business setup included',
+                  'No strategy or guidance provided',
+                  'No support when issues arise',
                 ].map((item) => (
                   <li key={item} className="flex gap-2 items-start">
                     <span className="text-zinc-300 mt-0.5">✗</span>
@@ -87,12 +87,12 @@ export default function Home() {
               <p className="text-xs font-semibold tracking-widest text-zinc-900 uppercase mb-4">AI Tools</p>
               <ul className="flex flex-col gap-3 text-sm text-zinc-500">
                 {[
-                  'Output still needs expert editing',
-                  'You write every prompt yourself',
-                  'Can\'t set up your Google listing',
-                  'Generic content, no local knowledge',
+                  'Output still requires expert editing',
+                  'You manage every step yourself',
+                  'Cannot set up your Google listing',
+                  'Generic content with no local knowledge',
                   'No accountability or follow-through',
-                  'Still requires your time and effort',
+                  'Still demands significant time and effort',
                 ].map((item) => (
                   <li key={item} className="flex gap-2 items-start">
                     <span className="text-zinc-300 mt-0.5">✗</span>
@@ -102,17 +102,17 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Me */}
+            {/* GPP */}
             <div className="bg-blue-950 text-white rounded-2xl p-6">
-              <p className="text-xs font-semibold tracking-widest text-white uppercase mb-4">Working With Me</p>
+              <p className="text-xs font-semibold tracking-widest text-white uppercase mb-4">Global Point Partners</p>
               <ul className="flex flex-col gap-3 text-sm text-zinc-300">
                 {[
-                  'Done completely for you',
-                  'Built around your specific business',
-                  'Transparent, one-time or monthly pricing',
+                  'Fully managed and handled for you',
+                  'Built specifically for your business',
+                  'Transparent one-time or monthly pricing',
                   'Google Business setup included',
                   'Strategy tailored to your goals',
-                  'Ongoing support when you need it',
+                  'Ongoing support whenever you need it',
                 ].map((item) => (
                   <li key={item} className="flex gap-2 items-start">
                     <span className="text-white mt-0.5">✓</span>
@@ -132,23 +132,23 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
             <div className="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-sm mb-4">1</div>
-            <h3 className="font-semibold mb-2">We talk</h3>
+            <h3 className="font-semibold mb-2">We connect</h3>
             <p className="text-zinc-500 text-sm leading-relaxed">
-              Tell me about your business, what you're struggling with, and what you want. No forms, no sales pitch — just a real conversation.
+              Share details about your business, your goals, and what you are looking to achieve. Our team listens carefully and asks the right questions to fully understand your needs.
             </p>
           </div>
           <div>
             <div className="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-sm mb-4">2</div>
-            <h3 className="font-semibold mb-2">I tell you exactly what you need</h3>
+            <h3 className="font-semibold mb-2">We present a plan</h3>
             <p className="text-zinc-500 text-sm leading-relaxed">
-              I'll give you an honest assessment of what's missing and what would actually make a difference — not a list of everything I can sell you.
+              We provide an honest assessment of what your business needs most and outline a clear, straightforward plan focused on results rather than unnecessary add-ons.
             </p>
           </div>
           <div>
             <div className="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-sm mb-4">3</div>
             <h3 className="font-semibold mb-2">We get to work</h3>
             <p className="text-zinc-500 text-sm leading-relaxed">
-              I handle everything. You stay focused on your business while I get your online presence in order.
+              Our team handles everything from start to finish. You stay focused on running your business while we build and strengthen your online presence.
             </p>
           </div>
         </div>
