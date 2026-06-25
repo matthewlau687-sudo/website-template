@@ -5,19 +5,34 @@ import { useState } from 'react'
 
 const faqs = [
   {
-    question: 'How long does it take to build a website?',
+    question: 'How does the subscription work?',
     answer:
-      'Most websites are completed within 1 to 2 weeks from the time I have all the information I need. The timeline depends on how quickly we can align on design direction and how much content you already have ready.',
+      'All services are offered on a monthly subscription basis. This covers your website hosting, domain costs, ongoing maintenance, and any updates or content management included in your plan. As long as you are subscribed, your online presence stays live, up to date, and actively managed.',
   },
   {
-    question: 'Do I need to provide content, or do you write it?',
+    question: 'Why is this a subscription and not a one-time payment?',
     answer:
-      'I can write the copy for your website based on information you share about your business. If you already have content you want to use, I can work with that too. Either way, everything goes through you for approval before anything goes live.',
+      'Running a professional online presence has ongoing costs — domain registration, hosting, security, and content management all require continuous work and payment. A subscription model means I can keep everything running smoothly on your behalf without you having to think about it.',
+  },
+  {
+    question: 'How long does it take to get set up?',
+    answer:
+      'Most websites are ready within 1 to 2 weeks from the time I have all the information I need. The timeline depends on how quickly we align on design direction and how much content you already have ready.',
   },
   {
     question: 'What do I need to get started?',
     answer:
       'Just reach out. I will ask you a few questions about your business, your goals, and what you are looking for. From there I put together a clear plan and we go from there. No technical knowledge required on your end.',
+  },
+  {
+    question: 'Can I cancel at any time?',
+    answer:
+      'Yes. There are no long-term contracts. If you decide to cancel, I ask for 30 days notice so I can wrap things up cleanly and hand over anything you need to keep your site running independently.',
+  },
+  {
+    question: 'What happens to my website if I cancel?',
+    answer:
+      'If you cancel, your website will go offline since hosting and the domain are included in the subscription. Before cancellation is finalized, I will provide you with all your files and content so you can transfer everything to another provider if you choose.',
   },
   {
     question: 'Will my website work on mobile?',
@@ -27,22 +42,17 @@ const faqs = [
   {
     question: 'What is a Google Business Profile and why do I need one?',
     answer:
-      'A Google Business Profile is the listing that appears when someone searches for your business or a business like yours on Google. It shows your hours, phone number, location, photos, and reviews. Having one set up and optimized is one of the most effective ways to get found by local customers.',
+      'A Google Business Profile is the listing that appears when someone searches for your business or a similar business on Google. It shows your hours, phone number, location, photos, and reviews. Having it set up and optimized is one of the most effective ways to get found by local customers.',
   },
   {
-    question: 'What is included in the monthly retainer?',
+    question: 'Can I make changes to my website after it launches?',
     answer:
-      'The monthly retainer covers ongoing content updates to your Google Business Profile, website maintenance, minor edits and changes as needed, and a dedicated point of contact whenever questions come up. It is designed for businesses that want to stay active online without managing it themselves.',
+      'Yes. Updates and edits are included as part of your subscription. Just send me a message and I will take care of it.',
   },
   {
-    question: 'Can I make changes to my website after it is launched?',
+    question: 'How does billing work?',
     answer:
-      'Yes. If you are on a monthly retainer I handle updates for you. If you prefer a one-time setup, I can also provide guidance on how to make basic edits yourself, or you can reach out whenever something needs to change.',
-  },
-  {
-    question: 'How does payment work?',
-    answer:
-      'For one-time services, payment is split 50% upfront and 50% on completion. Monthly services are billed at the start of each month. I will walk you through everything during our initial conversation.',
+      'Your subscription is billed monthly. The first month covers the setup and launch of your website. After that, billing renews on the same date each month. I will walk you through everything during our initial conversation.',
   },
 ]
 

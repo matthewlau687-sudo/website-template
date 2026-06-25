@@ -6,30 +6,30 @@ const services = [
   {
     id: 'website-design',
     title: 'Website Design & Setup',
-    price: 'Starting at $500',
+    price: 'Starting at $500/month',
     description:
-      'Your website is often the first impression a potential customer has of your business. We design and build clean, professional websites that load quickly, display properly on all devices, and clearly communicate who you are and how to reach you.',
+      'Your website is often the first impression a potential customer has of your business. Your subscription covers design, build, hosting, domain costs, and ongoing maintenance so your site stays live and up to date without you having to manage any of it.',
   },
   {
     id: 'google-business',
     title: 'Google Business Profile',
-    price: 'Starting at $200',
+    price: 'Starting at $200/month',
     description:
-      'When someone searches for your type of business nearby, your Google listing is one of the first things they see. We set it up correctly, write compelling content, and optimize it so your business appears in local searches and makes a strong first impression.',
+      'When someone searches for your type of business nearby, your Google listing is one of the first things they see. Your subscription covers setup, optimization, and ongoing management so your profile stays accurate and active.',
   },
   {
     id: 'monthly-content',
     title: 'Monthly Content',
     price: 'Starting at $300/month',
     description:
-      'Maintaining visibility online requires consistent activity. We manage your Google posts and social content on a regular schedule, keeping your business looking active and engaged without requiring any additional time from you.',
+      'Maintaining visibility online requires consistent activity. Your subscription includes regular Google posts and social content managed on your behalf, keeping your business looking active and engaged every month.',
   },
   {
     id: 'monthly-retainer',
     title: 'Monthly Retainer',
     price: 'Starting at $400/month',
     description:
-      'For businesses that want comprehensive ongoing support, our retainer package covers content management, profile maintenance, website updates, and a dedicated point of contact whenever you need assistance.',
+      'The all-in package. Your subscription covers website hosting and maintenance, Google Business management, monthly content, and a dedicated point of contact for any updates or questions that come up.',
   },
 ]
 
