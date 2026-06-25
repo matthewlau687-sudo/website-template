@@ -32,7 +32,13 @@ export default async function AboutPage() {
             className="rounded-full object-cover border border-zinc-200 mb-8"
           />
         )}
-        <h2 className="text-2xl font-bold mb-2">{about?.name || 'Matthew Lau'}</h2>
+        <h2 className="text-2xl font-bold mb-1">{about?.name || 'Matthew Lau'}</h2>
+        <a
+          href="mailto:mlau1@globalpointpartners.com"
+          className="text-sm text-zinc-400 hover:text-zinc-700 transition-colors mb-6 inline-block"
+        >
+          mlau1@globalpointpartners.com
+        </a>
         {about?.tagline && (
           <p className="text-zinc-500 text-lg mb-6">{about.tagline}</p>
         )}
