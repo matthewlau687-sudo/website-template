@@ -37,15 +37,33 @@ export default function Home() {
 
       {/* Plans strip */}
       <section className="border-b border-zinc-100">
-        <div className="max-w-4xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div className="max-w-4xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-3 gap-10">
           {[
-            { title: 'Basic', price: '$149/mo', href: '/services' },
-            { title: 'Standard', price: '$249/mo', href: '/services' },
-            { title: 'Premium', price: '$399/mo', href: '/services' },
+            {
+              title: 'Basic',
+              price: '$149/mo',
+              description: 'Custom website, hosting, domain, and up to 2 edits per month. Everything you need to get online.',
+              href: '/services',
+            },
+            {
+              title: 'Standard',
+              price: '$249/mo',
+              description: 'Everything in Basic plus Google Business Profile setup, optimization, and monthly content updates.',
+              href: '/services',
+            },
+            {
+              title: 'Premium',
+              price: '$399/mo',
+              description: 'Full-service management including social media content, unlimited edits, and priority support.',
+              href: '/services',
+            },
           ].map((s) => (
-            <Link key={s.title} href={s.href} className="group">
-              <p className="font-semibold text-zinc-900 mb-1 group-hover:underline underline-offset-2">{s.title}</p>
-              <p className="text-sm text-zinc-900">{s.price}</p>
+            <Link key={s.title} href={s.href} className="group flex flex-col gap-2">
+              <div className="flex items-baseline justify-between">
+                <p className="font-semibold text-zinc-900 group-hover:underline underline-offset-2">{s.title}</p>
+                <p className="text-sm font-medium text-zinc-500">{s.price}</p>
+              </div>
+              <p className="text-sm text-zinc-400 leading-relaxed">{s.description}</p>
             </Link>
           ))}
         </div>
