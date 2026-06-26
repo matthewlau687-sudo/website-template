@@ -121,7 +121,7 @@ export default function ServicesPage() {
 
         {/* Cancel note */}
         <p className="text-center text-zinc-400 text-sm mt-6">
-          One-time $299 setup fee applies to all plans. Monthly plans can be cancelled anytime with 30 days notice.
+          Monthly plans can be cancelled anytime with 30 days notice.
         </p>
       </section>
 
