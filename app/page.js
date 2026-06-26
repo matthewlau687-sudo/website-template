@@ -41,19 +41,19 @@ export default function Home() {
           {[
             {
               title: 'Basic',
-              price: '$149/mo',
-              description: 'Custom website, hosting, domain, and up to 2 edits per month. Everything you need to get online.',
+              price: '$199/mo',
+              description: 'Custom website, hosting, domain, and up to 2 edit requests per month. Everything you need to get online.',
               href: '/services',
             },
             {
               title: 'Standard',
-              price: '$249/mo',
+              price: '$299/mo',
               description: 'Everything in Basic plus Google Business Profile setup, optimization, and monthly content updates.',
               href: '/services',
             },
             {
               title: 'Premium',
-              price: '$399/mo',
+              price: '$499/mo',
               description: 'Full-service management including social media content, unlimited edits, and priority support.',
               href: '/services',
             },

@@ -7,7 +7,7 @@ const faqs = [
   {
     question: 'What plans do you offer?',
     answer:
-      'There are three plans: Basic ($149/mo), Standard ($249/mo), and Premium ($399/mo). Basic covers your custom website, hosting, domain, and up to 2 edits per month. Standard adds Google Business Profile management and monthly content updates. Premium includes everything in Standard plus social media content, unlimited edits, and priority support.',
+      'There are three plans: Basic ($199/mo), Standard ($299/mo), and Premium ($499/mo), each with a one-time $299 setup fee. Basic covers your custom website, hosting, domain, and up to 2 edit requests per month. Standard adds Google Business Profile management and monthly content updates. Premium includes everything in Standard plus social media content, unlimited edits, and priority support.',
   },
   {
     question: 'Why is this a subscription and not a one-time payment?',
@@ -52,7 +52,7 @@ const faqs = [
   {
     question: 'How does billing work?',
     answer:
-      'Your subscription is billed monthly starting on the day you sign up. The first month covers your setup and launch. After that, billing renews automatically on the same date each month.',
+      'A one-time setup fee of $299 is charged when you sign up. This covers your site build, domain configuration, and onboarding. Your monthly subscription begins once your site is live and renews automatically on the same date each month.',
   },
 ]
 

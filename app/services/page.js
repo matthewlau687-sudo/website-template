@@ -5,14 +5,14 @@ export const metadata = { title: 'Services — Global Point Partners' }
 const plans = [
   {
     name: 'Basic',
-    price: '$149',
+    price: '$199',
     description: 'Everything you need to get your business online professionally.',
     features: [
       'Custom website design & setup',
       'Website hosting included',
       'Domain included',
       'Mobile-friendly design',
-      'Up to 2 edits per month',
+      'Up to 2 edit requests per month (one discrete change per request)',
       'Email support',
     ],
     cta: 'Get Started',
@@ -20,21 +20,21 @@ const plans = [
   },
   {
     name: 'Standard',
-    price: '$249',
+    price: '$299',
     description: 'Expand your reach with Google and keep your content fresh.',
     features: [
       'Everything in Basic',
       'Google Business Profile setup & optimization',
       'Monthly Google post updates',
-      'Up to 5 edits per month',
+      'Up to 5 edit requests per month (one discrete change per request)',
       'Priority email support',
     ],
     cta: 'Get Started',
-    highlight: true,
+    highlight: false,
   },
   {
     name: 'Premium',
-    price: '$399',
+    price: '$499',
     description: 'Full-service management for businesses serious about growth.',
     features: [
       'Everything in Standard',
@@ -60,7 +60,7 @@ export default function ServicesPage() {
           </p>
           <h1 className="text-4xl font-bold mb-6">Simple, Subscription-Based Plans</h1>
           <p className="text-zinc-300 text-lg max-w-xl mx-auto">
-            No hidden fees. No one-time builds that disappear. Your online presence stays live, maintained, and improving every month.
+            No hidden fees. Your online presence stays live, maintained, and improving every month.
           </p>
         </div>
       </section>
@@ -71,39 +71,26 @@ export default function ServicesPage() {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`rounded-2xl border p-8 flex flex-col gap-6 ${
-                plan.highlight
-                  ? 'bg-blue-950 text-white border-blue-900'
-                  : 'bg-white text-black border-zinc-200'
-              }`}
+              className="rounded-2xl border border-zinc-200 bg-white p-8 flex flex-col gap-6"
             >
               {/* Plan header */}
               <div>
-                {plan.highlight && (
-                  <p className="text-xs font-semibold tracking-widest text-blue-300 uppercase mb-2">Most Popular</p>
-                )}
-                <h2 className={`text-xl font-bold mb-1 ${plan.highlight ? 'text-white' : 'text-zinc-900'}`}>
-                  {plan.name}
-                </h2>
-                <p className={`text-sm leading-relaxed ${plan.highlight ? 'text-zinc-300' : 'text-zinc-500'}`}>
-                  {plan.description}
-                </p>
+                <h2 className="text-xl font-bold mb-1 text-zinc-900">{plan.name}</h2>
+                <p className="text-sm leading-relaxed text-zinc-500">{plan.description}</p>
               </div>
 
               {/* Price */}
               <div>
-                <span className={`text-4xl font-bold ${plan.highlight ? 'text-white' : 'text-zinc-900'}`}>
-                  {plan.price}
-                </span>
-                <span className={`text-sm ml-1 ${plan.highlight ? 'text-zinc-300' : 'text-zinc-400'}`}>/month</span>
+                <span className="text-4xl font-bold text-zinc-900">{plan.price}</span>
+                <span className="text-sm ml-1 text-zinc-400">/month</span>
               </div>
 
               {/* Features */}
               <ul className="flex flex-col gap-3">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-2 text-sm">
-                    <span className={`mt-0.5 ${plan.highlight ? 'text-blue-300' : 'text-blue-600'}`}>✓</span>
-                    <span className={plan.highlight ? 'text-zinc-300' : 'text-zinc-600'}>{feature}</span>
+                    <span className="mt-0.5 text-blue-600">✓</span>
+                    <span className="text-zinc-600">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -111,11 +98,7 @@ export default function ServicesPage() {
               {/* CTA */}
               <Link
                 href="/contact"
-                className={`mt-auto text-center px-5 py-3 rounded-lg text-sm font-medium transition-colors ${
-                  plan.highlight
-                    ? 'bg-white text-blue-950 hover:bg-blue-50'
-                    : 'bg-blue-950 text-white hover:bg-blue-800'
-                }`}
+                className="mt-auto text-center px-5 py-3 rounded-lg text-sm font-medium transition-colors bg-blue-950 text-white hover:bg-blue-800"
               >
                 {plan.cta}
               </Link>
@@ -123,8 +106,22 @@ export default function ServicesPage() {
           ))}
         </div>
 
-        <p className="text-center text-zinc-400 text-sm mt-10">
-          All plans include a setup period of 1 to 2 weeks before your site goes live. Cancel anytime with 30 days notice.
+        {/* Edit request definition */}
+        <p className="text-zinc-400 text-sm mt-10 text-center">
+          An edit request is one specific change — e.g. update a photo, revise a paragraph, or change business hours.
+        </p>
+
+        {/* Setup fee */}
+        <div className="mt-6 border border-zinc-100 rounded-2xl bg-zinc-50 px-8 py-6 text-center">
+          <p className="text-sm font-semibold text-zinc-900 mb-1">One-time setup fee: $299</p>
+          <p className="text-sm text-zinc-400">
+            Applies to all plans. Covers site build, domain configuration, and onboarding.
+          </p>
+        </div>
+
+        {/* Cancel note */}
+        <p className="text-center text-zinc-400 text-sm mt-6">
+          One-time $299 setup fee applies to all plans. Monthly plans can be cancelled anytime with 30 days notice.
         </p>
       </section>
 
