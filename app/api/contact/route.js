@@ -20,12 +20,16 @@ export async function POST(request) {
       submittedAt: new Date().toISOString(),
     })
 
-    await resend.emails.send({
-      from: 'Global Point Partners <onboarding@resend.dev>',
-      to: 'mlau1@globalpointpartners.com',
-      subject: `New contact form submission from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\n\nMessage:\n${message}`,
-    })
+    try {
+      await resend.emails.send({
+        from: 'Global Point Partners <onboarding@resend.dev>',
+        to: 'mlau1@globalpointpartners.com',
+        subject: `New contact form submission from ${name}`,
+        text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\n\nMessage:\n${message}`,
+      })
+    } catch (emailErr) {
+      console.error('Email notification failed:', emailErr)
+    }
 
     return Response.json({ success: true })
   } catch (err) {
