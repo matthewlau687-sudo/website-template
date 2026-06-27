@@ -1,4 +1,7 @@
 import { writeClient } from '../../../sanity/lib/client'
+import { Resend } from 'resend'
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request) {
   try {
@@ -15,6 +18,13 @@ export async function POST(request) {
       phone: phone || '',
       message,
       submittedAt: new Date().toISOString(),
+    })
+
+    await resend.emails.send({
+      from: 'Global Point Partners <onboarding@resend.dev>',
+      to: 'mlau1@globalpointpartners.com',
+      subject: `New contact form submission from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\n\nMessage:\n${message}`,
     })
 
     return Response.json({ success: true })
