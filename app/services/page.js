@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import FadeIn from '../components/FadeIn'
 
 export const metadata = { title: 'Services — Global Point Partners' }
 
@@ -16,7 +17,6 @@ const plans = [
       '48-hour response time',
     ],
     cta: 'Get Started',
-    highlight: false,
   },
   {
     name: 'Standard',
@@ -30,7 +30,6 @@ const plans = [
       '24-hour response time',
     ],
     cta: 'Get Started',
-    highlight: false,
   },
   {
     name: 'Premium',
@@ -44,7 +43,6 @@ const plans = [
       'Same-day response time',
     ],
     cta: 'Get Started',
-    highlight: false,
   },
 ]
 
@@ -52,92 +50,83 @@ export default function ServicesPage() {
   return (
     <div className="bg-white text-black">
 
-      {/* Dark header */}
       <section className="bg-blue-950 text-white">
         <div className="max-w-4xl mx-auto px-6 py-28 text-center">
-          <p className="text-sm font-semibold tracking-widest text-zinc-300 uppercase mb-4">
-            Pricing
-          </p>
-          <h1 className="text-4xl font-bold mb-6">Simple, Subscription-Based Plans</h1>
-          <p className="text-zinc-300 text-lg max-w-xl mx-auto">
-            No hidden fees. Your online presence stays live, maintained, and improving every month.
-          </p>
+          <FadeIn>
+            <p className="text-sm font-semibold tracking-widest text-zinc-300 uppercase mb-4">Pricing</p>
+            <h1 className="text-4xl font-bold mb-6">Simple, Subscription-Based Plans</h1>
+            <p className="text-zinc-300 text-lg max-w-xl mx-auto">
+              No hidden fees. Your online presence stays live, maintained, and improving every month.
+            </p>
+          </FadeIn>
         </div>
       </section>
 
-      {/* Pricing cards */}
       <section className="max-w-5xl mx-auto px-6 py-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-          {plans.map((plan) => (
-            <div
-              key={plan.name}
-              className="rounded-2xl border border-zinc-200 bg-white p-8 flex flex-col gap-6"
-            >
-              {/* Plan header */}
-              <div>
-                <h2 className="text-xl font-bold mb-1 text-zinc-900">{plan.name}</h2>
-                <p className="text-sm leading-relaxed text-zinc-500">{plan.description}</p>
+          {plans.map((plan, i) => (
+            <FadeIn key={plan.name} delay={i * 100}>
+              <div className="rounded-2xl border border-zinc-200 bg-white p-8 flex flex-col gap-6">
+                <div>
+                  <h2 className="text-xl font-bold mb-1 text-zinc-900">{plan.name}</h2>
+                  <p className="text-sm leading-relaxed text-zinc-500">{plan.description}</p>
+                </div>
+                <div>
+                  <span className="text-4xl font-bold text-zinc-900">{plan.price}</span>
+                  <span className="text-sm ml-1 text-zinc-400">/month</span>
+                </div>
+                <ul className="flex flex-col gap-3">
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2 text-sm">
+                      <span className="mt-0.5 text-blue-600">✓</span>
+                      <span className="text-zinc-600">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/contact"
+                  className="mt-auto text-center px-5 py-3 rounded-lg text-sm font-medium transition-colors bg-blue-950 text-white hover:bg-blue-800"
+                >
+                  {plan.cta}
+                </Link>
               </div>
-
-              {/* Price */}
-              <div>
-                <span className="text-4xl font-bold text-zinc-900">{plan.price}</span>
-                <span className="text-sm ml-1 text-zinc-400">/month</span>
-              </div>
-
-              {/* Features */}
-              <ul className="flex flex-col gap-3">
-                {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2 text-sm">
-                    <span className="mt-0.5 text-blue-600">✓</span>
-                    <span className="text-zinc-600">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* CTA */}
-              <Link
-                href="/contact"
-                className="mt-auto text-center px-5 py-3 rounded-lg text-sm font-medium transition-colors bg-blue-950 text-white hover:bg-blue-800"
-              >
-                {plan.cta}
-              </Link>
-            </div>
+            </FadeIn>
           ))}
         </div>
 
-        {/* Edit request definition */}
-        <p className="text-zinc-400 text-sm mt-10 text-center">
-          An edit request is one specific change — e.g. update a photo, revise a paragraph, or change business hours.
-        </p>
-
-        {/* Setup fee */}
-        <div className="mt-6 border border-zinc-100 rounded-2xl bg-zinc-50 px-8 py-6 text-center">
-          <p className="text-sm font-semibold text-zinc-900 mb-1">One-time setup fee: $299</p>
-          <p className="text-sm text-zinc-400">
-            Applies to all plans. Covers site build, domain configuration, and onboarding.
+        <FadeIn>
+          <p className="text-zinc-400 text-sm mt-10 text-center">
+            An edit request is one specific change — e.g. update a photo, revise a paragraph, or change business hours.
           </p>
-        </div>
+        </FadeIn>
 
-        {/* Cancel note */}
-        <p className="text-center text-zinc-400 text-sm mt-6">
-          Monthly plans can be cancelled anytime with 30 days notice.
-        </p>
+        <FadeIn>
+          <div className="mt-6 border border-zinc-100 rounded-2xl bg-zinc-50 px-8 py-6 text-center">
+            <p className="text-sm font-semibold text-zinc-900 mb-1">One-time setup fee: $299</p>
+            <p className="text-sm text-zinc-400">
+              Applies to all plans. Covers site build, domain configuration, and onboarding.
+            </p>
+          </div>
+        </FadeIn>
+
+        <FadeIn>
+          <p className="text-center text-zinc-400 text-sm mt-6">
+            Monthly plans can be cancelled anytime with 30 days notice.
+          </p>
+        </FadeIn>
       </section>
 
-      {/* CTA */}
       <section className="bg-blue-950 text-white">
         <div className="max-w-3xl mx-auto px-6 py-24 text-center">
-          <h2 className="text-3xl font-bold mb-4">Not sure which plan is right for you?</h2>
-          <p className="text-zinc-300 mb-8">
-            Reach out and I will help you figure out the best fit for your business and budget.
-          </p>
-          <Link
-            href="/contact"
-            className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-blue-50 transition-colors"
-          >
-            Get in Touch
-          </Link>
+          <FadeIn>
+            <h2 className="text-3xl font-bold mb-4">Not sure which plan is right for you?</h2>
+            <p className="text-zinc-300 mb-8">
+              Reach out and I will help you figure out the best fit for your business and budget.
+            </p>
+            <Link href="/contact" className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-blue-50 transition-colors">
+              Get in Touch
+            </Link>
+          </FadeIn>
         </div>
       </section>
 

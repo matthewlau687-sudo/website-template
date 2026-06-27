@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import FadeIn from '../components/FadeIn'
 
 const faqs = [
   {
@@ -69,9 +70,7 @@ function FAQItem({ question, answer }) {
         <span className={`text-zinc-400 text-xl leading-none transition-transform duration-200 ${open ? 'rotate-45' : ''}`}>+</span>
       </button>
       {open && (
-        <p className="text-zinc-500 leading-relaxed pb-5">
-          {answer}
-        </p>
+        <p className="text-zinc-500 leading-relaxed pb-5">{answer}</p>
       )}
     </div>
   )
@@ -81,39 +80,35 @@ export default function FAQPage() {
   return (
     <div className="bg-white text-black">
 
-      {/* Dark header */}
       <section className="bg-blue-950 text-white">
         <div className="max-w-3xl mx-auto px-6 py-28 text-center">
-          <p className="text-sm font-semibold tracking-widest text-zinc-300 uppercase mb-4">
-            FAQ
-          </p>
-          <h1 className="text-4xl font-bold mb-6">Frequently Asked Questions</h1>
-          <p className="text-zinc-300 text-lg max-w-xl mx-auto">
-            Answers to the questions I hear most often. If yours is not here, reach out directly.
-          </p>
+          <FadeIn>
+            <p className="text-sm font-semibold tracking-widest text-zinc-300 uppercase mb-4">FAQ</p>
+            <h1 className="text-4xl font-bold mb-6">Frequently Asked Questions</h1>
+            <p className="text-zinc-300 text-lg max-w-xl mx-auto">
+              Answers to the questions I hear most often. If yours is not here, reach out directly.
+            </p>
+          </FadeIn>
         </div>
       </section>
 
-      {/* FAQ list */}
       <section className="max-w-3xl mx-auto px-6 py-20">
-        {faqs.map((faq) => (
-          <FAQItem key={faq.question} question={faq.question} answer={faq.answer} />
+        {faqs.map((faq, i) => (
+          <FadeIn key={faq.question} delay={(i % 3) * 50}>
+            <FAQItem question={faq.question} answer={faq.answer} />
+          </FadeIn>
         ))}
       </section>
 
-      {/* CTA */}
       <section className="bg-blue-950 text-white">
         <div className="max-w-3xl mx-auto px-6 py-24 text-center">
-          <h2 className="text-3xl font-bold mb-4">Still have questions?</h2>
-          <p className="text-zinc-300 mb-8">
-            Send a message and I will get back to you within 24 hours.
-          </p>
-          <Link
-            href="/contact"
-            className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-blue-50 transition-colors"
-          >
-            Get in Touch
-          </Link>
+          <FadeIn>
+            <h2 className="text-3xl font-bold mb-4">Still have questions?</h2>
+            <p className="text-zinc-300 mb-8">Send a message and I will get back to you within 24 hours.</p>
+            <Link href="/contact" className="px-6 py-3 bg-white text-black text-sm font-medium rounded-lg hover:bg-blue-50 transition-colors">
+              Get in Touch
+            </Link>
+          </FadeIn>
         </div>
       </section>
 

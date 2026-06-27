@@ -10,7 +10,7 @@ export default function FadeIn({ children, className = '', delay = 0 }) {
     const el = ref.current
     if (!el) return
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect() } },
+      ([entry]) => setVisible(entry.isIntersecting),
       { threshold: 0.12 }
     )
     observer.observe(el)
