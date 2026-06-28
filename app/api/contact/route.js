@@ -22,7 +22,7 @@ export async function POST(request) {
 
     try {
       await resend.emails.send({
-        from: 'Global Point Partners <onboarding@resend.dev>',
+        from: 'Global Point Partners <noreply@globalpointpartners.com>',
         to: 'mlau1@globalpointpartners.com',
         subject: `New contact form submission from ${name}`,
         text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\n\nMessage:\n${message}`,
