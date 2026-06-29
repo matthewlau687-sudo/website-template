@@ -8,101 +8,138 @@ export default function Home() {
     <div className="bg-white text-black">
 
       {/* Hero */}
-      <section className="bg-blue-950 text-white">
-        <div className="max-w-4xl mx-auto px-6 py-32">
-          <FadeIn delay={0}>
-            <p className="text-white text-sm font-medium mb-6 tracking-wide uppercase">
-              Online Presence for Small Businesses
-            </p>
-            <h1 className="text-5xl md:text-6xl font-bold leading-[1.1] mb-8">
-              If people cannot find you online,<br className="hidden md:block" /> they are finding someone else.
+      <section className="relative bg-blue-950 text-white overflow-hidden">
+        {/* Subtle grid overlay */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+          backgroundSize: '60px 60px'
+        }} />
+        <div className="relative max-w-5xl mx-auto px-6 py-36">
+          <FadeIn>
+            <div className="inline-flex items-center gap-2 bg-blue-900/60 border border-blue-700 rounded-full px-4 py-1.5 mb-8">
+              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+              <span className="text-xs font-medium text-blue-200 tracking-wide">Now taking new clients</span>
+            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-8 max-w-3xl">
+              If people can't find you online, they're finding someone else.
             </h1>
-            <p className="text-zinc-300 text-lg max-w-lg mb-10 leading-relaxed">
-              Global Point Partners helps small businesses establish and grow their digital presence through professional websites, Google Business optimization, and consistent content management.
+            <p className="text-zinc-300 text-lg max-w-xl mb-10 leading-relaxed">
+              Global Point Partners builds and manages your entire online presence — website, Google Business, and ongoing content — so you can focus on running your business.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/contact"
-                className="px-6 py-3 bg-white text-black text-sm font-semibold rounded-lg hover:bg-blue-50 transition-colors"
+                className="px-6 py-3 bg-white text-blue-950 text-sm font-semibold rounded-lg hover:bg-blue-50 transition-colors"
               >
                 Get in Touch
               </Link>
               <Link
                 href="/services"
-                className="px-6 py-3 border border-blue-700 text-white text-sm font-medium rounded-lg hover:bg-blue-800 transition-colors"
+                className="px-6 py-3 border border-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-900 transition-colors"
               >
-                See Pricing
+                View Plans
               </Link>
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* Plans strip */}
-      <section className="border-b border-zinc-100">
-        <div className="max-w-4xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-3 gap-10">
+      {/* Stats bar */}
+      <section className="border-b border-zinc-100 bg-zinc-50">
+        <div className="max-w-5xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            {
-              title: 'Basic',
-              price: '$199/mo',
-              description: 'Custom website, hosting, domain, and up to 2 edit requests per month. Everything you need to get online.',
-              href: '/services',
-              delay: 0,
-            },
-            {
-              title: 'Standard',
-              price: '$299/mo',
-              description: 'Everything in Basic plus Google Business Profile setup, optimization, and monthly content updates.',
-              href: '/services',
-              delay: 100,
-            },
-            {
-              title: 'Premium',
-              price: '$499/mo',
-              description: 'Full-service management including social media content, unlimited edits, and priority support.',
-              href: '/services',
-              delay: 200,
-            },
-          ].map((s) => (
-            <FadeIn key={s.title} delay={s.delay}>
-              <Link href={s.href} className="group flex flex-col gap-2">
-                <div className="flex items-baseline justify-between">
-                  <p className="font-semibold text-zinc-900 group-hover:underline underline-offset-2">{s.title}</p>
-                  <p className="text-sm font-medium text-zinc-500">{s.price}</p>
-                </div>
-                <p className="text-sm text-zinc-400 leading-relaxed">{s.description}</p>
-              </Link>
+            { stat: '1–2 weeks', label: 'Average setup time' },
+            { stat: '3 plans', label: 'Starting at $199/mo' },
+            { stat: '24/7', label: 'Site stays live' },
+            { stat: '30 days', label: 'Cancel anytime' },
+          ].map((item) => (
+            <FadeIn key={item.label}>
+              <div className="text-center">
+                <p className="text-2xl font-bold text-blue-950 mb-1">{item.stat}</p>
+                <p className="text-xs text-zinc-400 font-medium">{item.label}</p>
+              </div>
             </FadeIn>
           ))}
         </div>
       </section>
 
+      {/* Plans */}
+      <section className="max-w-5xl mx-auto px-6 py-24">
+        <FadeIn>
+          <div className="text-center mb-14">
+            <p className="text-xs font-semibold tracking-widest text-blue-600 uppercase mb-3">Pricing</p>
+            <h2 className="text-3xl font-bold text-zinc-900 mb-4">Simple plans, no surprises</h2>
+            <p className="text-zinc-400 max-w-md mx-auto">Everything is handled for you. Pick the level of support that fits your business.</p>
+          </div>
+        </FadeIn>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            {
+              name: 'Basic',
+              price: '$199',
+              description: 'Custom website, hosting, domain, and up to 2 edit requests per month.',
+              delay: 0,
+            },
+            {
+              name: 'Standard',
+              price: '$299',
+              description: 'Everything in Basic plus Google Business Profile setup and monthly content updates.',
+              delay: 100,
+            },
+            {
+              name: 'Premium',
+              price: '$499',
+              description: 'Full-service management including social media, unlimited edits, and same-day support.',
+              delay: 200,
+            },
+          ].map((plan) => (
+            <FadeIn key={plan.name} delay={plan.delay}>
+              <Link href="/services" className="group block border border-zinc-200 rounded-2xl p-7 hover:border-blue-950 hover:shadow-lg transition-all duration-300">
+                <p className="text-xs font-semibold tracking-widest text-zinc-400 uppercase mb-4">{plan.name}</p>
+                <div className="mb-4">
+                  <span className="text-3xl font-bold text-zinc-900">{plan.price}</span>
+                  <span className="text-sm text-zinc-400 ml-1">/mo</span>
+                </div>
+                <p className="text-sm text-zinc-500 leading-relaxed mb-5">{plan.description}</p>
+                <span className="text-sm font-medium text-blue-950 group-hover:underline underline-offset-2">
+                  See full details →
+                </span>
+              </Link>
+            </FadeIn>
+          ))}
+        </div>
+        <FadeIn>
+          <p className="text-center text-zinc-400 text-sm mt-8">One-time $299 setup fee applies to all plans.</p>
+        </FadeIn>
+      </section>
+
       {/* Comparison */}
-      <section className="bg-zinc-50 border-t border-zinc-100">
-        <div className="max-w-4xl mx-auto px-6 py-24">
+      <section className="bg-zinc-50 border-y border-zinc-100">
+        <div className="max-w-5xl mx-auto px-6 py-24">
           <FadeIn>
-            <h2 className="text-2xl font-bold mb-3">Why not just use a template or AI?</h2>
-            <p className="text-zinc-500 mb-12 max-w-xl">
-              It is a fair question. Here is the difference.
-            </p>
+            <div className="text-center mb-14">
+              <p className="text-xs font-semibold tracking-widest text-blue-600 uppercase mb-3">Why Us</p>
+              <h2 className="text-3xl font-bold text-zinc-900 mb-4">Why not just use a template or AI?</h2>
+              <p className="text-zinc-400 max-w-md mx-auto">It is a fair question. Here is the honest difference.</p>
+            </div>
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
             <FadeIn delay={0}>
-              <div className="bg-white border border-zinc-200 rounded-2xl p-6">
-                <p className="text-xs font-semibold tracking-widest text-zinc-900 uppercase mb-4">Website Builder / Template</p>
+              <div className="bg-white border border-zinc-200 rounded-2xl p-7 h-full">
+                <p className="text-xs font-semibold tracking-widest text-zinc-400 uppercase mb-5">Website Builder</p>
                 <ul className="flex flex-col gap-3 text-sm text-zinc-500">
                   {[
                     'You design and build it yourself',
                     'Looks like thousands of other sites',
-                    'Fees with no ongoing management included',
+                    'Fees with no ongoing management',
                     'No Google Business setup included',
-                    'No strategy or guidance provided',
+                    'No strategy or guidance',
                     'No support when issues arise',
                   ].map((item) => (
-                    <li key={item} className="flex gap-2 items-start">
-                      <span className="text-zinc-300 mt-0.5">✗</span>
+                    <li key={item} className="flex gap-2.5 items-start">
+                      <span className="text-red-300 mt-0.5 shrink-0">✗</span>
                       {item}
                     </li>
                   ))}
@@ -111,19 +148,19 @@ export default function Home() {
             </FadeIn>
 
             <FadeIn delay={100}>
-              <div className="bg-white border border-zinc-200 rounded-2xl p-6">
-                <p className="text-xs font-semibold tracking-widest text-zinc-900 uppercase mb-4">AI Tools</p>
+              <div className="bg-white border border-zinc-200 rounded-2xl p-7 h-full">
+                <p className="text-xs font-semibold tracking-widest text-zinc-400 uppercase mb-5">AI Tools</p>
                 <ul className="flex flex-col gap-3 text-sm text-zinc-500">
                   {[
-                    'Output still requires expert editing',
+                    'Output still needs expert editing',
                     'You manage every step yourself',
                     'Cannot set up your Google listing',
-                    'Generic content with no local knowledge',
+                    'Generic, no local knowledge',
                     'No accountability or follow-through',
-                    'Still demands significant time and effort',
+                    'Demands significant time and effort',
                   ].map((item) => (
-                    <li key={item} className="flex gap-2 items-start">
-                      <span className="text-zinc-300 mt-0.5">✗</span>
+                    <li key={item} className="flex gap-2.5 items-start">
+                      <span className="text-red-300 mt-0.5 shrink-0">✗</span>
                       {item}
                     </li>
                   ))}
@@ -132,8 +169,8 @@ export default function Home() {
             </FadeIn>
 
             <FadeIn delay={200}>
-              <div className="bg-blue-950 text-white rounded-2xl p-6">
-                <p className="text-xs font-semibold tracking-widest text-white uppercase mb-4">Global Point Partners</p>
+              <div className="bg-blue-950 text-white rounded-2xl p-7 h-full">
+                <p className="text-xs font-semibold tracking-widest text-blue-300 uppercase mb-5">Global Point Partners</p>
                 <ul className="flex flex-col gap-3 text-sm text-zinc-300">
                   {[
                     'Fully managed and handled for you',
@@ -143,62 +180,74 @@ export default function Home() {
                     'Strategy tailored to your goals',
                     'Ongoing support whenever you need it',
                   ].map((item) => (
-                    <li key={item} className="flex gap-2 items-start">
-                      <span className="text-white mt-0.5">✓</span>
+                    <li key={item} className="flex gap-2.5 items-start">
+                      <span className="text-green-400 mt-0.5 shrink-0">✓</span>
                       {item}
                     </li>
                   ))}
                 </ul>
               </div>
             </FadeIn>
-
           </div>
         </div>
       </section>
 
       {/* How it works */}
-      <section className="max-w-4xl mx-auto px-6 py-24">
+      <section className="max-w-5xl mx-auto px-6 py-24">
         <FadeIn>
-          <h2 className="text-2xl font-bold mb-12">How it works</h2>
+          <div className="text-center mb-14">
+            <p className="text-xs font-semibold tracking-widest text-blue-600 uppercase mb-3">Process</p>
+            <h2 className="text-3xl font-bold text-zinc-900">How it works</h2>
+          </div>
         </FadeIn>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {[
             {
-              num: '1',
+              num: '01',
               title: 'We connect',
-              body: 'Share details about your business, your goals, and what you are looking to achieve. I listen carefully and ask the right questions to fully understand your needs.',
+              body: 'Share details about your business and goals. I listen carefully and ask the right questions to fully understand what you need.',
               delay: 0,
             },
             {
-              num: '2',
-              title: 'We present a plan',
-              body: 'We provide an honest assessment of what your business needs most and outline a clear, straightforward plan focused on results rather than unnecessary add-ons.',
+              num: '02',
+              title: 'We build a plan',
+              body: 'I provide an honest assessment of what will move the needle and outline a clear plan focused on results, not unnecessary add-ons.',
               delay: 100,
             },
             {
-              num: '3',
+              num: '03',
               title: 'We get to work',
-              body: 'I handle everything from start to finish. You stay focused on running your business while I build and strengthen your online presence.',
+              body: 'I handle everything from start to finish. You stay focused on your business while I build and maintain your online presence.',
               delay: 200,
             },
           ].map((step) => (
             <FadeIn key={step.num} delay={step.delay}>
-              <div className="w-10 h-10 rounded-full bg-blue-900 text-white flex items-center justify-center font-bold text-sm mb-4">{step.num}</div>
-              <h3 className="font-semibold mb-2">{step.title}</h3>
-              <p className="text-zinc-500 text-sm leading-relaxed">{step.body}</p>
+              <div className="relative pl-16">
+                <span className="absolute left-0 top-0 text-5xl font-bold text-zinc-100 leading-none select-none">{step.num}</span>
+                <h3 className="font-semibold text-zinc-900 mb-2 mt-1">{step.title}</h3>
+                <p className="text-zinc-500 text-sm leading-relaxed">{step.body}</p>
+              </div>
             </FadeIn>
           ))}
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-blue-950 text-white">
-        <div className="max-w-4xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center justify-between gap-8">
+      <section className="relative bg-blue-950 text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+          backgroundSize: '60px 60px'
+        }} />
+        <div className="relative max-w-5xl mx-auto px-6 py-28 text-center">
           <FadeIn>
-            <h2 className="text-3xl font-bold mb-6">Ready to get started?</h2>
+            <p className="text-xs font-semibold tracking-widest text-blue-300 uppercase mb-4">Get Started</p>
+            <h2 className="text-4xl font-bold mb-6">Ready to grow your online presence?</h2>
+            <p className="text-zinc-300 mb-10 max-w-md mx-auto">
+              Reach out today and I will get back to you within 24 hours to discuss the right plan for your business.
+            </p>
             <Link
               href="/contact"
-              className="inline-block px-6 py-3 bg-white text-black text-sm font-semibold rounded-lg hover:bg-blue-50 transition-colors"
+              className="inline-block px-8 py-4 bg-white text-blue-950 text-sm font-semibold rounded-lg hover:bg-blue-50 transition-colors"
             >
               Get in Touch
             </Link>
