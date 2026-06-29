@@ -15,15 +15,9 @@ export default async function Home() {
     <div className="bg-white text-black">
 
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center bg-blue-950 text-white overflow-hidden">
-        {/* Background image */}
-        <Image
-          src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&q=80"
-          alt="Team working on website design"
-          fill
-          priority
-          className="object-cover object-center opacity-20"
-        />
+      <section className="relative min-h-[90vh] flex items-center text-white overflow-hidden" style={{
+        background: 'linear-gradient(rgba(23,37,84,0.85), rgba(23,37,84,0.92)), url("https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&q=80") center/cover no-repeat'
+      }}>
         {/* Grid overlay */}
         <div className="absolute inset-0 opacity-10" style={{
           backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
@@ -108,14 +102,10 @@ export default async function Home() {
           ].map((card) => (
             <FadeIn key={card.title} delay={card.delay}>
               <div className="group rounded-2xl overflow-hidden border border-zinc-200 hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-52 overflow-hidden">
-                  <Image
-                    src={card.img}
-                    alt={card.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div
+                  className="relative h-52 overflow-hidden"
+                  style={{ background: `linear-gradient(to top, rgba(0,0,0,0.6), transparent), url("${card.img}") center/cover no-repeat` }}
+                >
                   <h3 className="absolute bottom-4 left-5 text-white font-bold text-lg">{card.title}</h3>
                 </div>
                 <div className="p-5">
@@ -272,17 +262,9 @@ export default async function Home() {
       </section>
 
       {/* CTA */}
-      <section className="relative bg-blue-950 text-white overflow-hidden">
-        <Image
-          src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80"
-          alt="Business meeting"
-          fill
-          className="object-cover object-center opacity-15"
-        />
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
-          backgroundSize: '60px 60px'
-        }} />
+      <section className="relative text-white overflow-hidden" style={{
+        background: 'linear-gradient(rgba(23,37,84,0.88), rgba(23,37,84,0.95)), url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80") center/cover no-repeat'
+      }}>
         <div className="relative max-w-5xl mx-auto px-6 py-28 text-center">
           <FadeIn>
             <p className="text-xs font-semibold tracking-widest text-blue-300 uppercase mb-4">Get Started</p>
