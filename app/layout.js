@@ -3,7 +3,30 @@ import Nav from "./components/Nav";
 
 export const metadata = {
   title: "Global Point Partners — Web Design for Small Business",
-  description: "We help small businesses build and grow their online presence.",
+  description: "We help small businesses build and grow their online presence with custom websites, Google Business setup, and ongoing content management.",
+  metadataBase: new URL("https://globalpointpartners.com"),
+  openGraph: {
+    title: "Global Point Partners — Web Design for Small Business",
+    description: "We help small businesses build and grow their online presence with custom websites, Google Business setup, and ongoing content management.",
+    url: "https://globalpointpartners.com",
+    siteName: "Global Point Partners",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80",
+        width: 1200,
+        height: 630,
+        alt: "Global Point Partners — Web Design for Small Business",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Global Point Partners — Web Design for Small Business",
+    description: "We help small businesses build and grow their online presence with custom websites, Google Business setup, and ongoing content management.",
+    images: ["https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80"],
+  },
 };
 
 export default function RootLayout({ children }) {
