@@ -8,7 +8,7 @@ const faqs = [
   {
     question: 'What plans do you offer?',
     answer:
-      'There are three plans: Basic ($199/mo), Standard ($299/mo), and Premium ($499/mo), each with a one-time $299 setup fee. Basic covers your custom website, hosting, domain, and up to 2 edit requests per month. Standard adds Google Business Profile management and monthly content updates. Premium includes everything in Standard plus social media content, unlimited edits, and priority support.',
+      'There are three plans: Basic ($199/mo), Standard ($299/mo), and Premium ($499/mo), each with a one-time $299 setup fee. All plans are billed monthly with a 3-month minimum term. Annual billing is also available at 15% off. Basic covers your custom website, hosting, domain, and up to 2 edit requests per month. Standard adds Google Business Profile management and monthly content updates. Premium includes everything in Standard plus social media content, unlimited edits, and priority support.',
   },
   {
     question: 'Why is this a subscription and not a one-time payment?',
@@ -26,6 +26,11 @@ const faqs = [
       'Just reach out. I will ask you a few questions about your business, your goals, and what you are looking for. From there I put together a clear plan and we go from there. No technical knowledge required on your end.',
   },
   {
+    question: 'Is there a discount for paying annually?',
+    answer:
+      'Yes. Choosing annual billing saves you 15% compared to paying month-to-month. Annual plans are billed upfront for the full year. Basic drops to $169/mo, Standard to $254/mo, and Premium to $424/mo when billed annually.',
+  },
+  {
     question: 'Can I upgrade or downgrade my plan?',
     answer:
       'Yes. You can switch plans at any time. Upgrades take effect immediately and downgrades apply at the start of your next billing cycle.',
@@ -33,7 +38,7 @@ const faqs = [
   {
     question: 'Can I cancel at any time?',
     answer:
-      'Yes. There are no long-term contracts. If you decide to cancel, I ask for 30 days notice so I can wrap things up cleanly and hand over anything you need.',
+      'All plans require a 3-month minimum term. After that, plans continue month-to-month and can be cancelled with 30 days notice. If you are on annual billing, the remaining balance of the year is non-refundable.',
   },
   {
     question: 'What happens to my website if I cancel?',
@@ -53,7 +58,7 @@ const faqs = [
   {
     question: 'How does billing work?',
     answer:
-      'A one-time setup fee of $299 is charged when you sign up. This covers your site build, domain configuration, and onboarding. Your monthly subscription begins once your site is live and renews automatically on the same date each month.',
+      'A one-time setup fee of $299 is charged when you sign up. After that, monthly plans renew automatically each month. Annual plans are billed upfront at 15% off the monthly rate and renew each year. All plans have a 3-month minimum term.',
   },
 ]
 
