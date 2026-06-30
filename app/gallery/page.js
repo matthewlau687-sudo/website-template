@@ -9,6 +9,12 @@ export const revalidate = 0
 
 export const metadata = { title: 'Portfolio — Global Point Partners' }
 
+function getImageSrc(item) {
+  if (item.image) return urlFor(item.image).width(800).height(600).url()
+  if (item.siteUrl) return `https://image.thum.io/get/width/800/crop/600/${item.siteUrl}`
+  return null
+}
+
 export default async function GalleryPage() {
   const images = await client.fetch(galleryQuery)
 
@@ -21,7 +27,7 @@ export default async function GalleryPage() {
             <p className="text-sm font-semibold tracking-widest text-zinc-300 uppercase mb-4">Our Work</p>
             <h1 className="text-4xl font-bold mb-6">Portfolio</h1>
             <p className="text-zinc-300 text-lg max-w-xl mx-auto">
-              A selection of websites and digital projects we have delivered for small businesses across a range of industries.
+              A selection of websites and digital projects delivered for small businesses across a range of industries.
             </p>
           </FadeIn>
         </div>
@@ -34,29 +40,41 @@ export default async function GalleryPage() {
           </FadeIn>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {images.map((item, i) => (
-              <FadeIn key={item._id} delay={(i % 3) * 100}>
-                <div className="group">
-                  <div className="aspect-square overflow-hidden rounded-xl bg-zinc-100 border border-zinc-200">
-                    {item.image && (
-                      <Image
-                        src={urlFor(item.image).width(600).height(600).url()}
-                        alt={item.title || ''}
-                        width={600}
-                        height={600}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    )}
-                  </div>
-                  {(item.title || item.description) && (
-                    <div className="mt-3">
-                      {item.title && <p className="text-sm font-semibold text-zinc-800">{item.title}</p>}
-                      {item.description && <p className="text-sm text-zinc-500 mt-0.5">{item.description}</p>}
+            {images.map((item, i) => {
+              const src = getImageSrc(item)
+              return (
+                <FadeIn key={item._id} delay={(i % 3) * 100}>
+                  <div className="group rounded-2xl overflow-hidden border border-zinc-200 hover:shadow-lg transition-shadow duration-300">
+                    <div className="relative aspect-[4/3] bg-zinc-100 overflow-hidden">
+                      {src ? (
+                        <Image
+                          src={src}
+                          alt={item.title || 'Project screenshot'}
+                          fill
+                          className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-zinc-300 text-sm">No image</div>
+                      )}
                     </div>
-                  )}
-                </div>
-              </FadeIn>
-            ))}
+                    <div className="p-5">
+                      {item.title && <p className="font-semibold text-zinc-900 mb-1">{item.title}</p>}
+                      {item.description && <p className="text-sm text-zinc-500 leading-relaxed">{item.description}</p>}
+                      {item.siteUrl && (
+                        <a
+                          href={item.siteUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block mt-3 text-sm font-medium text-blue-950 hover:underline underline-offset-2"
+                        >
+                          View site →
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </FadeIn>
+              )
+            })}
           </div>
         )}
       </section>

@@ -133,15 +133,21 @@ export default async function Home() {
               </div>
             </FadeIn>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              {previewImages.map((item, i) => (
+              {previewImages.map((item, i) => {
+                const src = item.image
+                  ? urlFor(item.image).width(800).height(600).url()
+                  : item.siteUrl
+                  ? `https://image.thum.io/get/width/800/crop/600/${item.siteUrl}`
+                  : null
+                return (
                 <FadeIn key={item._id} delay={i * 100}>
                   <div className="group aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-200 relative">
-                    {item.image && (
+                    {src && (
                       <Image
-                        src={urlFor(item.image).width(800).height(600).url()}
+                        src={src}
                         alt={item.title || ''}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                       />
                     )}
                     {item.title && (
@@ -151,7 +157,7 @@ export default async function Home() {
                     )}
                   </div>
                 </FadeIn>
-              ))}
+              )})}
             </div>
           </div>
         </section>
