@@ -95,13 +95,7 @@ export default function ServicesPage() {
         </div>
 
         <FadeIn>
-          <p className="text-zinc-400 text-sm mt-10 text-center">
-            An edit request is one specific change — e.g. update a photo, revise a paragraph, or change business hours.
-          </p>
-        </FadeIn>
-
-        <FadeIn>
-          <div className="mt-6 border border-zinc-100 rounded-2xl bg-zinc-50 px-8 py-6 text-center">
+          <div className="mt-10 border border-zinc-100 rounded-2xl bg-zinc-50 px-8 py-6 text-center">
             <p className="text-sm font-semibold text-zinc-900 mb-1">One-time setup fee: $299</p>
             <p className="text-sm text-zinc-400">
               Applies to all plans. Covers site build, domain configuration, and onboarding.
