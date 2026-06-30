@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import FadeIn from './FadeIn'
 
 const plans = [
   {
@@ -78,59 +77,53 @@ export default function PricingCards() {
 
       {/* Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-        {plans.map((plan, i) => (
-          <FadeIn key={plan.name} delay={i * 100}>
-            <div className="rounded-2xl border border-zinc-200 bg-white p-8 flex flex-col gap-6">
-              <div>
-                <h2 className="text-xl font-bold mb-1 text-zinc-900">{plan.name}</h2>
-                <p className="text-sm leading-relaxed text-zinc-500">{plan.description}</p>
-              </div>
-              <div>
-                <span className="text-4xl font-bold text-zinc-900">
-                  ${isAnnual ? plan.annual : plan.monthly}
-                </span>
-                <span className="text-sm ml-1 text-zinc-400">/month</span>
-                {isAnnual && (
-                  <p className="text-xs text-zinc-400 mt-1">
-                    Billed annually · <span className="line-through">${plan.monthly}/mo</span>
-                  </p>
-                )}
-              </div>
-              <ul className="flex flex-col gap-3">
-                {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2 text-sm">
-                    <span className="mt-0.5 text-blue-600">✓</span>
-                    <span className="text-zinc-600">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/contact"
-                className="mt-auto text-center px-5 py-3 rounded-lg text-sm font-medium transition-colors bg-blue-950 text-white hover:bg-blue-800"
-              >
-                Get Started
-              </Link>
+        {plans.map((plan) => (
+          <div key={plan.name} className="rounded-2xl border border-zinc-200 bg-white p-8 flex flex-col gap-6">
+            <div>
+              <h2 className="text-xl font-bold mb-1 text-zinc-900">{plan.name}</h2>
+              <p className="text-sm leading-relaxed text-zinc-500">{plan.description}</p>
             </div>
-          </FadeIn>
+            <div>
+              <span className="text-4xl font-bold text-zinc-900">
+                ${isAnnual ? plan.annual : plan.monthly}
+              </span>
+              <span className="text-sm ml-1 text-zinc-400">/month</span>
+              {isAnnual && (
+                <p className="text-xs text-zinc-400 mt-1">
+                  Billed annually · <span className="line-through">${plan.monthly}/mo</span>
+                </p>
+              )}
+            </div>
+            <ul className="flex flex-col gap-3">
+              {plan.features.map((feature) => (
+                <li key={feature} className="flex items-start gap-2 text-sm">
+                  <span className="mt-0.5 text-blue-600">✓</span>
+                  <span className="text-zinc-600">{feature}</span>
+                </li>
+              ))}
+            </ul>
+            <Link
+              href="/contact"
+              className="mt-auto text-center px-5 py-3 rounded-lg text-sm font-medium transition-colors bg-blue-950 text-white hover:bg-blue-800"
+            >
+              Get Started
+            </Link>
+          </div>
         ))}
       </div>
 
       {/* Setup fee */}
-      <FadeIn>
-        <div className="mt-10 border border-zinc-100 rounded-2xl bg-zinc-50 px-8 py-6 text-center">
-          <p className="text-sm font-semibold text-zinc-900 mb-1">One-time setup fee: $299</p>
-          <p className="text-sm text-zinc-400">
-            Applies to all plans. Covers site build, domain configuration, and onboarding.
-          </p>
-        </div>
-      </FadeIn>
+      <div className="mt-10 border border-zinc-100 rounded-2xl bg-zinc-50 px-8 py-6 text-center">
+        <p className="text-sm font-semibold text-zinc-900 mb-1">One-time setup fee: $299</p>
+        <p className="text-sm text-zinc-400">
+          Applies to all plans. Covers site build, domain configuration, and onboarding.
+        </p>
+      </div>
 
       {/* Terms note */}
-      <FadeIn>
-        <p className="text-center text-zinc-400 text-sm mt-6">
-          All plans require a 3-month minimum term, then continue month-to-month with 30 days notice to cancel.
-        </p>
-      </FadeIn>
+      <p className="text-center text-zinc-400 text-sm mt-6">
+        All plans require a 3-month minimum term, then continue month-to-month with 30 days notice to cancel.
+      </p>
     </>
   )
 }
