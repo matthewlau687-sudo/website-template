@@ -13,9 +13,8 @@ export default function RootLayout({ children }) {
         <Nav />
         <main className="flex-1 bg-white">{children}</main>
         <footer className="bg-zinc-950 text-zinc-400">
-          <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+          <div className="max-w-5xl mx-auto px-6 py-10 text-center text-sm">
             <p>© {new Date().getFullYear()} Global Point Partners. All rights reserved.</p>
-            <p>Website designed & built by <span className="text-white font-medium">Global Point Partners</span></p>
           </div>
         </footer>
       </body>
