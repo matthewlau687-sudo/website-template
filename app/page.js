@@ -141,9 +141,13 @@ export default async function Home() {
                   : item.siteUrl
                   ? `https://image.thum.io/get/width/800/crop/600/${item.siteUrl}`
                   : null
+                const Wrapper = item.siteUrl ? 'a' : 'div'
+                const wrapperProps = item.siteUrl
+                  ? { href: item.siteUrl, target: '_blank', rel: 'noopener noreferrer' }
+                  : {}
                 return (
                 <FadeIn key={item._id} delay={i * 100}>
-                  <div className="group aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-200 relative">
+                  <Wrapper {...wrapperProps} className="group block aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-200 relative">
                     {src && (
                       <Image
                         src={src}
@@ -152,12 +156,11 @@ export default async function Home() {
                         className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                       />
                     )}
-                    {item.title && (
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-                        <p className="text-white font-semibold">{item.title}</p>
-                      </div>
-                    )}
-                  </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+                      {item.title && <p className="text-white font-semibold">{item.title}</p>}
+                      {item.siteUrl && <span className="ml-auto text-white text-sm">Visit site →</span>}
+                    </div>
+                  </Wrapper>
                 </FadeIn>
               )})}
             </div>
