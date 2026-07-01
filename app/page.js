@@ -136,6 +136,8 @@ export default async function Home() {
               {previewImages.map((item, i) => {
                 const src = item.image
                   ? urlFor(item.image).width(800).height(600).url()
+                  : item.autoScreenshot
+                  ? urlFor(item.autoScreenshot).width(800).height(600).url()
                   : item.siteUrl
                   ? `https://image.thum.io/get/width/800/crop/600/${item.siteUrl}`
                   : null

@@ -9,6 +9,7 @@ export const galleryQuery = `*[_type == "galleryImage"] | order(_createdAt desc)
   _id,
   title,
   image,
+  autoScreenshot,
   siteUrl,
   description,
   date,

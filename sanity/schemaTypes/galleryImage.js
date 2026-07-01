@@ -12,6 +12,13 @@ export const galleryImage = {
       options: { hotspot: true },
       description: 'Upload a custom image to override the auto-generated screenshot.',
     },
+    {
+      name: 'autoScreenshot',
+      title: 'Auto Screenshot',
+      type: 'image',
+      description: 'Auto-generated nightly from the Website URL. Do not edit manually.',
+      readOnly: true,
+    },
     { name: 'description', title: 'Description', type: 'text', rows: 3 },
     { name: 'date', title: 'Date', type: 'date' },
   ],

@@ -11,6 +11,7 @@ export const metadata = { title: 'Portfolio — Global Point Partners' }
 
 function getImageSrc(item) {
   if (item.image) return urlFor(item.image).width(800).height(600).url()
+  if (item.autoScreenshot) return urlFor(item.autoScreenshot).width(800).height(600).url()
   if (item.siteUrl) return `https://image.thum.io/get/width/800/crop/600/${item.siteUrl}`
   return null
 }
